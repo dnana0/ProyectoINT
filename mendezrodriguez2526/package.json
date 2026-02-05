@@ -1,5 +1,5 @@
 {
-  "name": "collazofigueroa2526",
+  "name": "mendezrodriguez2526",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -20,7 +20,7 @@
     "bootstrap-icons": "^1.13.1",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
-    "express": "^5.1.0",
+    "express": "^5.2.1",
     "json-server": "^1.0.0-beta.3",
     "jsonwebtoken": "^9.0.2",
     "jspdf": "^4.0.0",
