@@ -2,9 +2,12 @@
   <!--Botón centrado-->
 
   <div
-    class="mx-auto mt-2 p-4 pb-5 border rounded-3 shadow-sm min-vh-75 bg-light">
-    <h3 class="text-center mt-2 mb-3 d-flex align-items-center justify-content-center" 
-    style="color: #7a0f16;">
+    class="mx-auto mt-2 p-4 pb-5 border rounded-3 shadow-sm min-vh-75 bg-light"
+  >
+    <h3
+      class="text-center mt-2 mb-3 d-flex align-items-center justify-content-center"
+      style="color: #7a0f16"
+    >
       <i class="bi bi-person-circle fs-3 me-2"></i>
       Gestión de Clientes
     </h3>
@@ -22,20 +25,20 @@
               v-model="nuevoCliente.dni"
               @blur="validarDni"
               class="form-control w-auto"
-                :class="[
+              :class="[
                 { 'is-invalid': !dniValido },
                 { 'readonly-input': editando },
               ]"
               :readonly="editando"
               required
             />
-			      <button
+            <button
               type="button"
               class="btn btn-secondary ms-3"
               @click="buscarClientePorDNI(nuevoCliente.dni)"
               :disabled="editando"
-              :aria-disabled="String(editando)">
-              
+              :aria-disabled="String(editando)"
+            >
               <i class="bi bi-search"></i>
             </button>
             <div v-if="!dniValido" class="invalid-feedback">
@@ -45,47 +48,65 @@
         </div>
 
         <div class="col-md-3 d-flex align-items-center justify-content-center">
-        <label>Tipo de Cliente:</label>
-        <div class="ms-3">
-          <label for="radio-empresa">Empresa:</label>
-          <input type="radio" id="radio-empresa" value="empresa" name="radio" class="ms-2" v-model="nuevoCliente.tipoCliente" required/>
-        </div>
+          <label>Tipo de Cliente:</label>
+          <div class="ms-3">
+            <label for="radio-empresa">Empresa:</label>
+            <input
+              type="radio"
+              id="radio-empresa"
+              value="empresa"
+              name="radio"
+              class="ms-2"
+              v-model="nuevoCliente.tipoCliente"
+              required
+            />
+          </div>
 
-        <div class="ms-3">
-          <label for="radio-particular">Particular:</label>
-          <input type="radio" id="radio-particular" value="particular" name="radio" class="ms-2" v-model="nuevoCliente.tipoCliente" required/>
+          <div class="ms-3">
+            <label for="radio-particular">Particular:</label>
+            <input
+              type="radio"
+              id="radio-particular"
+              value="particular"
+              name="radio"
+              class="ms-2"
+              v-model="nuevoCliente.tipoCliente"
+              required
+            />
+          </div>
         </div>
-      </div>
 
         <!-- Columna Fecha de Alta a la derecha -->
-        <div class="col-md-4 d-flex align-items-center justify-content-end ms-4">
-        <label for="fecha_alta" class="form-label me-2 mb-0 text-nowrap">
-          Fecha de Alta:
-        </label>
-
-        <input
-          type="date"
-          id="fecha_alta"
-          v-model="nuevoCliente.fecha_alta"
-          @change="onFechaChange"
-          class="form-control w-auto me-5"
-          required
-        />
-
-        <!-- botón limpiar cambios -->
-        <button
-          type="button"
-          class="btn btn-secondary btn-sm d-flex align-items-center justify-content-center  "
-          @click="limpiarCampos"
-          title="Reiniciar campos"
+        <div
+          class="col-md-4 d-flex align-items-center justify-content-end ms-4"
         >
-          <i class="bi bi-arrow-clockwise fs-5"></i>
-        </button>
-      </div>
+          <label for="fecha_alta" class="form-label me-2 mb-0 text-nowrap">
+            Fecha de Alta:
+          </label>
+
+          <input
+            type="date"
+            id="fecha_alta"
+            v-model="nuevoCliente.fecha_alta"
+            @change="onFechaChange"
+            class="form-control w-auto me-5"
+            required
+          />
+
+          <!-- botón limpiar cambios -->
+          <button
+            type="button"
+            class="btn btn-secondary btn-sm d-flex align-items-center justify-content-center"
+            @click="limpiarCampos"
+            title="Reiniciar campos"
+          >
+            <i class="bi bi-arrow-clockwise fs-5"></i>
+          </button>
+        </div>
       </div>
 
       <!-- Nombre y Apellidos -->
-      <div class="mb-3 row g-3 align-items-center ">
+      <div class="mb-3 row g-3 align-items-center">
         <!-- Nombre -->
         <div class="col-md-5 d-flex align-items-center">
           <label for="nombre" class="form-label mb-0 text-nowrap w-25"
@@ -103,7 +124,9 @@
 
         <!-- Apellidos -->
         <div class="col-md-5 d-flex align-items-center">
-          <label for="apellidos" class="form-label tamano-label mb-0 ms-5 text-nowrap"
+          <label
+            for="apellidos"
+            class="form-label tamano-label mb-0 ms-5 text-nowrap"
             >Apellidos:</label
           >
           <input
@@ -136,8 +159,10 @@
         </div>
 
         <!-- Móvil -->
-        <div class="col-md-3 d-flex align-items-center ">
-          <label for="movil" class="form-label tamano-label ms-5 mb-0 text-nowrap"
+        <div class="col-md-3 d-flex align-items-center">
+          <label
+            for="movil"
+            class="form-label tamano-label ms-5 mb-0 text-nowrap"
             >Móvil:</label
           >
           <input
@@ -168,7 +193,9 @@
 
         <!-- Provincia -->
         <div class="col-md-3 d-flex align-items-center">
-          <label for="provincia" class="form-label tamano-label ms-5 mb-0 text-nowrap"
+          <label
+            for="provincia"
+            class="form-label tamano-label ms-5 mb-0 text-nowrap"
             >Provincia:</label
           >
           <select
@@ -209,7 +236,7 @@
       <!-- Aviso Legal -->
 
       <!-- Contraseña -->
-      <div class="row mb-3" >
+      <div class="row mb-3">
         <div class="row g-2 justify-content-center mt-2">
           <div class="col-md-3 d-flex mt-3 align-items-center">
             <label class="me-2 mb-0 text-nowrap align-middle"
@@ -241,20 +268,20 @@
       </div>
 
       <div class="d-flex align-items-center mt-3">
-      <div class="flex-grow-1 d-flex justify-content-center">
-        <input
-          type="checkbox"
-          id="avisoLegal"
-          v-model="nuevoCliente.lopd"
-          class="form-check-input me-2"
-          required
-        />
-        <label for="avisoLegal" class="form-check-label">
-          He leído y acepto el
-          <a href="/AvisoLegal" target="_blank">Aviso Legal</a>.
-        </label>
+        <div class="flex-grow-1 d-flex justify-content-center">
+          <input
+            type="checkbox"
+            id="avisoLegal"
+            v-model="nuevoCliente.lopd"
+            class="form-check-input me-2"
+            required
+          />
+          <label for="avisoLegal" class="form-check-label">
+            He leído y acepto el
+            <a href="/AvisoLegal" target="_blank">Aviso Legal</a>.
+          </label>
+        </div>
       </div>
-    </div>
 
       <!-- Botón centrado y checkbox al final -->
       <div class="d-flex justify-content-between mt-3">
@@ -268,10 +295,13 @@
           <label for="historico" class="form-check-label ms-2">Histórico</label>
         </div>
 
-        
         <!-- Espacio izquierdo para centrar el botón -->
         <div class="flex-grow-1 d-flex justify-content-center">
-          <button type="submit" class="btn btn-primary px-4" :disabled="!nuevoCliente.lopd">
+          <button
+            type="submit"
+            class="btn btn-primary px-4"
+            :disabled="!nuevoCliente.lopd"
+          >
             {{ editando ? "Modificar" : "Guardar" }}
           </button>
         </div>
@@ -291,7 +321,7 @@
     </form>
     <!-- Lista de Clientes -->
     <div class="table-responsive" v-if="isAdmin">
-      <h4 class="text-center w-100 ">Listado Clientes</h4>
+      <h4 class="text-center w-100">Listado Clientes</h4>
       <table class="table table-bordered table-striped w-100 aling-middle">
         <thead class="table-primary">
           <tr>
@@ -304,8 +334,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(cliente, index) in clientesPaginados" :key="cliente.id || index">
-            <th scope="row" class="text-center py-1">{{ (currentPage - 1 ) * clientesPorPage + index +1 }}</th>
+          <tr
+            v-for="(cliente, index) in clientesPaginados"
+            :key="cliente.id || index"
+          >
+            <th scope="row" class="text-center py-1">
+              {{ (currentPage - 1) * clientesPorPage + index + 1 }}
+            </th>
             <td class="py-1">{{ cliente.apellidos }}</td>
             <td class="py-1">{{ cliente.nombre }}</td>
             <td class="text-center py-1">{{ cliente.movil }}</td>
@@ -331,7 +366,6 @@
               >
                 <i class="bi bi-person-check"></i>
               </button>
-			  
             </td>
           </tr>
         </tbody>
@@ -340,16 +374,24 @@
   </div>
   <!-- Navegación de página-->
   <div class="d-flex justify-content-center my-3" v-if="isAdmin">
-        <button class="btn btn-outline-primary btn-sm me-2 rounded-0 border-1 shadow-none" 
-        @click = "beforePagina" :disabled="currentPage <= 1">
-          <i class="bi bi-chevron-left "></i>
-        </button>
-        <span class="mx-3 align-self-center text-muted">Página {{ currentPage  }}</span>
-        <button class="btn btn-outline-primary btn-sm rounded-0 border-1 shadow-none" 
-        @click="nextPagina" :disabled="currentPage >= totalPages">
-         <i class="bi bi-chevron-right "></i>
-        </button>
-       </div>
+    <button
+      class="btn btn-outline-primary btn-sm me-2 rounded-0 border-1 shadow-none"
+      @click="beforePagina"
+      :disabled="currentPage <= 1"
+    >
+      <i class="bi bi-chevron-left"></i>
+    </button>
+    <span class="mx-3 align-self-center text-muted"
+      >Página {{ currentPage }}</span
+    >
+    <button
+      class="btn btn-outline-primary btn-sm rounded-0 border-1 shadow-none"
+      @click="nextPagina"
+      :disabled="currentPage >= totalPages"
+    >
+      <i class="bi bi-chevron-right"></i>
+    </button>
+  </div>
 </template>
 
 <script setup>
@@ -360,7 +402,7 @@ import {
   deleteCliente,
   addCliente,
   updateCliente,
-  getClientePorDni
+  getClientePorDni,
 } from "@/api/clientes.js";
 import Swal from "sweetalert2";
 import bcrypt from "bcryptjs";
@@ -368,7 +410,6 @@ import { esAdmin } from "../api/authApi";
 //import { ref } from 'vue';
 
 //SCRIPT CRUD
-
 
 const nuevoCliente = ref({
   dni: "",
@@ -385,13 +426,11 @@ const nuevoCliente = ref({
   tipoCliente: "",
   tipo: "user",
   password: "",
-  password2: ""
+  password2: "",
 });
 
 // Validación contraseña
 const passwordValido = ref(true);
-
-
 
 const editando = ref(false);
 const clienteEditandoId = ref(null);
@@ -409,39 +448,39 @@ const isLogueado = ref(false);
 // Zona Cargar clientes Al Montar el componente
 onMounted(async () => {
   isAdmin.value = await esAdmin();
-  const token = sessionStorage.getItem('token')
+  const token = sessionStorage.getItem("token");
   if (!token) {
     isLogueado.value = false;
   } else {
     isLogueado.value = true;
   }
-  if (isAdmin.value) cargarClientes()
+  if (isAdmin.value) cargarClientes();
   if (isLogueado.value == true) {
-    const cliente = await getClientePorDni(sessionStorage.getItem('dni'))
+    const cliente = await getClientePorDni(sessionStorage.getItem("dni"));
     nuevoCliente.value = {
-        dni: cliente.dni,
-        nombre: cliente.nombre,
-        apellidos: cliente.apellidos,
-        email: cliente.email,
-        movil: cliente.movil,
-        direccion: cliente.direccion,
-        provincia: cliente.provincia,
-        municipio: cliente.municipio,
-        fecha_alta: cliente.fecha_alta,
-        historico: cliente.historico,
-        lopd: cliente.lopd,
-        tipoCliente: cliente.tipoCliente,
-        tipo: cliente.tipo
+      dni: cliente.dni,
+      nombre: cliente.nombre,
+      apellidos: cliente.apellidos,
+      email: cliente.email,
+      movil: cliente.movil,
+      direccion: cliente.direccion,
+      provincia: cliente.provincia,
+      municipio: cliente.municipio,
+      fecha_alta: cliente.fecha_alta,
+      historico: cliente.historico,
+      lopd: cliente.lopd,
+      tipoCliente: cliente.tipoCliente,
+      tipo: cliente.tipo,
     };
-    editando.value = true
-    clienteEditandoId.value = cliente.id
+    editando.value = true;
+    clienteEditandoId.value = cliente.id;
   }
-  totalPages = Math.ceil(numClientes.value / clientesPorPage); 
+  totalPages = Math.ceil(numClientes.value / clientesPorPage);
   currentPage.value = 1;
 });
 
 ///avanzar y retroceder
- 
+
 // Métodos de paginación
 const beforePagina = () => {
   if (currentPage.value > 1) {
@@ -459,7 +498,7 @@ const nextPagina = () => {
 
 // Propiedad computada para obtener los clientes en la página actual
 // computed crea una propiedad reactiva que se actualiza automáticamente
-// cuando cambian las dependencias (currentPage o clientes) 
+// cuando cambian las dependencias (currentPage o clientes)
 // es decir paso pagina o vuelvo atrás cargando los clientes de esa página
 // slice extrae una sección del array clientes
 // start es el índice inicial y end el índice final (no incluido)
@@ -470,49 +509,48 @@ const clientesPaginados = computed(() => {
   return clientes.value.slice(start, end);
 });
 
-
 const cargarClientes = () => {
-      getClientes(mostrarHistorico.value).then(data => {
-        clientes.value = data;
-        numClientes.value = data.length;  // Actualiza el nº total de clientes
-        currentPage.value = 1;  // Reiniciar a la 1era página al cargar
-      })
-      Swal.fire({
-        icon: 'success',
-        title: "Listando Clientes...",
-        showConfirmButton: false,
-        timer: 1500
-        });
-    }
+  getClientes(mostrarHistorico.value).then((data) => {
+    clientes.value = data;
+    numClientes.value = data.length; // Actualiza el nº total de clientes
+    currentPage.value = 1; // Reiniciar a la 1era página al cargar
+  });
+  Swal.fire({
+    icon: "success",
+    title: "Listando Clientes...",
+    showConfirmButton: false,
+    timer: 1500,
+  });
+};
 const guardarCliente = async () => {
-  
-    validarDni();
-    validarEmail();
-    validarMovil();
+  validarDni();
+  validarEmail();
+  validarMovil();
 
-    if (!dniValido.value || !emailValido.value || !movilValido.value) {
-      Swal.fire({
-        icon: "error",
-        title: "Hay campos inválidos",
-        text: "Corrija DNI, móvil o email antes de guardar",
-        showConfirmButton: true,
-      });
-      return; // Salir de la función si hay errores
-    }
+  if (!dniValido.value || !emailValido.value || !movilValido.value) {
+    Swal.fire({
+      icon: "error",
+      title: "Hay campos inválidos",
+      text: "Corrija DNI, móvil o email antes de guardar",
+      showConfirmButton: true,
+    });
+    return; // Salir de la función si hay errores
+  }
 
-    // Antes de guardar, el usuario debe haber aceptado el Aviso Legal
-    if (!nuevoCliente.value.lopd) {
-      Swal.fire({
-        icon: 'warning',
-        title: 'Debes aceptar el Aviso Legal antes de guardar',
-        showConfirmButton: false,
-        timer: 2000
-      });
-      return;
-    }
+  // Antes de guardar, el usuario debe haber aceptado el Aviso Legal
+  if (!nuevoCliente.value.lopd) {
+    Swal.fire({
+      icon: "warning",
+      title: "Debes aceptar el Aviso Legal antes de guardar",
+      showConfirmButton: false,
+      timer: 2000,
+    });
+    return;
+  }
 
   // Validar contraseña: mínimo 6 caracteres y que coincidan
-  if (!editando.value) { // solo validar en creación (opcional)
+  if (!editando.value) {
+    // solo validar en creación (opcional)
     const pw = nuevoCliente.value.password || "";
     const pw2 = nuevoCliente.value.password2 || "";
     if (pw.length < 6 || pw !== pw2) {
@@ -529,10 +567,10 @@ const guardarCliente = async () => {
   }
 
   // Asegurar que antes de guardar la fecha de alta esté en formato dd/mm/yyyy
-  if (nuevoCliente.value.fecha_alta.includes("/")){
+  if (nuevoCliente.value.fecha_alta.includes("/")) {
     nuevoCliente.value.fecha_alta = nuevoCliente.value.fecha_alta
-    ? formatearFechaParaInput(nuevoCliente.value.fecha_alta)
-    : nuevoCliente.value.fecha_alta;
+      ? formatearFechaParaInput(nuevoCliente.value.fecha_alta)
+      : nuevoCliente.value.fecha_alta;
   }
   // Validar duplicados solo si estás creando (no si editando)
   if (!editando.value) {
@@ -540,7 +578,7 @@ const guardarCliente = async () => {
       (cliente) =>
         cliente.dni === nuevoCliente.value.dni ||
         cliente.movil === nuevoCliente.value.movil ||
-        cliente.email === nuevoCliente.value.email
+        cliente.email === nuevoCliente.value.email,
     );
     if (duplicado) {
       Swal.fire({
@@ -570,7 +608,10 @@ const guardarCliente = async () => {
     // Hashear contraseña antes de guardar
     if (nuevoCliente.value.password) {
       const salt = bcrypt.genSaltSync(10);
-      nuevoCliente.value.password = bcrypt.hashSync(nuevoCliente.value.password, salt);
+      nuevoCliente.value.password = bcrypt.hashSync(
+        nuevoCliente.value.password,
+        salt,
+      );
       // Limpiar password2 después de hashear
       delete nuevoCliente.value.password2;
     }
@@ -579,11 +620,11 @@ const guardarCliente = async () => {
       // Modificar cliente (PUT)
       const clienteActualizado = await updateCliente(
         clienteEditandoId.value,
-        nuevoCliente.value
+        nuevoCliente.value,
       );
       // Actualiza el cliente en la lista local
       const index = clientes.value.findIndex(
-        (c) => c.id === clienteEditandoId.value
+        (c) => c.id === clienteEditandoId.value,
       );
       if (index !== -1) clientes.value[index] = clienteActualizado;
       Swal.fire({
@@ -618,7 +659,7 @@ const guardarCliente = async () => {
     //   historico: true
     // };
     if (!editando.value) {
-      limpiarCampos()
+      limpiarCampos();
     } else {
       nuevoCliente.value.password = "";
     }
@@ -650,7 +691,7 @@ const eliminarCliente = async (movil) => {
   clientes.value = await getClientes();
   // Buscar cliente completo (que incluye el ID)
   const clienteAEliminar = clientes.value.find(
-    (cliente) => cliente.movil === movil
+    (cliente) => cliente.movil === movil,
   );
 
   if (!clienteAEliminar) {
@@ -848,7 +889,7 @@ const filtrarMunicipios = () => {
 
   // 3️⃣ filtrar los municipios cuyo id empiece por esos dos dígitos
   municipiosFiltrados.value = municipios.value.filter((m) =>
-    m.id.startsWith(codigoProv)
+    m.id.startsWith(codigoProv),
   );
 
   // 4️⃣ opcional: resetear el municipio si ya no corresponde
@@ -912,8 +953,6 @@ function formatearFechaParaInput(fecha) {
   return "";
 }
 
-
-
 const buscarClientePorDNI = async (dni) => {
   if (!dni || dni.trim() === "") {
     Swal.fire({
@@ -939,10 +978,10 @@ const buscarClientePorDNI = async (dni) => {
       return;
     }
 
-  // ✅ Cargar los datos en el formulario
-  nuevoCliente.value = { ...cliente };
-  // Mantener la fecha en almacenamiento (dd/mm/yyyy) y preparar el input (yyyy-mm-dd)
-  nuevoCliente.value.fecha_alta = formatearFechaParaInput(cliente.fecha_alta);
+    // ✅ Cargar los datos en el formulario
+    nuevoCliente.value = { ...cliente };
+    // Mantener la fecha en almacenamiento (dd/mm/yyyy) y preparar el input (yyyy-mm-dd)
+    nuevoCliente.value.fecha_alta = formatearFechaParaInput(cliente.fecha_alta);
 
     // Actualiza lista de municipios si cambia la provincia
     filtrarMunicipios();
@@ -968,7 +1007,6 @@ const buscarClientePorDNI = async (dni) => {
   }
 };
 
-
 // 🔹 Esta función se ejecutará al hacer clic en el icono azul:
 const limpiarCampos = () => {
   nuevoCliente.value = {
@@ -985,9 +1023,9 @@ const limpiarCampos = () => {
     lopd: false,
     tipoCliente: "",
     password: "",
-    password2: ""
-  }
-}
+    password2: "",
+  };
+};
 
 // Añadimos limpieza de passwords si se usa sin reescribir todo
 const validarPassword = () => {
@@ -995,7 +1033,6 @@ const validarPassword = () => {
   const pw2 = nuevoCliente.value.password2 || "";
   passwordValido.value = pw.length >= 6 && pw === pw2;
 };
-
 </script>
 
 <style scoped>
@@ -1008,13 +1045,13 @@ const validarPassword = () => {
   display: block;
 }
 
-.tamano-label{
+.tamano-label {
   width: 90px;
   min-width: 90px;
 }
 
 .table-primary th {
-  background-color:   #f59191 !important;
+  background-color: #f59191 !important;
   color: black !important;
 }
 
