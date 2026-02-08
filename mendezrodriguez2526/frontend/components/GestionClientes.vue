@@ -510,11 +510,17 @@ const clientesPaginados = computed(() => {
 });
 
 const cargarClientes = () => {
-  getClientes(mostrarHistorico.value).then((data) => {
-    clientes.value = data;
-    numClientes.value = data.length; // Actualiza el nº total de clientes
-    currentPage.value = 1; // Reiniciar a la 1era página al cargar
-  });
+  console.log("cargarClientes() called, mostrarHistorico=", mostrarHistorico.value);
+  getClientes(mostrarHistorico.value)
+    .then((data) => {
+      console.log("getClientes returned", data?.length, data);
+      clientes.value = data;
+      numClientes.value = data.length; // Actualiza el nº total de clientes
+      currentPage.value = 1; // Reiniciar a la 1era página al cargar
+    })
+    .catch((err) => {
+      console.error("Error fetching clientes:", err);
+    });
   Swal.fire({
     icon: "success",
     title: "Listando Clientes...",

@@ -119,6 +119,9 @@
 <script setup>
 import { ref, reactive } from "vue";
 import axios from "axios";
+
+
+//FRONTEND de contacto (ENVIO DE CORREO), con formulario reactivo y función de envío a backend con Resend
 // Formulario reactivo
 const form = reactive({
   nombre: "",

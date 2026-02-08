@@ -2,20 +2,29 @@ import axios from "axios";
 
 const API_URL = "http://localhost:3000/clientes";
 
-//Obtener la lista de clientes desde la API
-
+// Obtener la lista de clientes desde la API
 export const getClientes = (mostrarHistorico) => {
-    let url = `${API_URL}?_sort=apellidos&_order=asc`;
-
+    // Algunas versiones/betas de json-server pueden manejar mal los parámetros
+    // especiales como `_sort` y `_order`. Para mayor compatibilidad solicitamos
+    // directamente la colección y dejamos el filtrado por `historico` cuando
+    // sea necesario.
+    let url = `${API_URL}`;
     if (!mostrarHistorico) {
-        // Solo clientes con histórico = true
-        url += `&historico=true`;
-    } else {
-        // Todos los clientes, sin filtrar por histórico
-        url += ``;
+        url += `?historico=true`;
     }
-
-    return axios.get(url).then((res) => res.data);
+    return axios.get(url).then((res) => {
+        // Ordenar por apellidos en el cliente (case-insensitive) para que la
+        // tabla siempre muestre una lista ordenada aunque el backend no soporte
+        // correctamente `_sort`/`_order`.
+        const data = res.data || [];
+        data.sort((a, b) => {
+            const aa = (a.apellidos || "").toString().trim();
+            const bb = (b.apellidos || "").toString().trim();
+            // localeCompare permite orden correcto para caracteres acentuados
+            return aa.localeCompare(bb, 'es', { sensitivity: 'base' });
+        });
+        return data;
+    });
 };
 
 export const addCliente = (nuevoCliente) => {

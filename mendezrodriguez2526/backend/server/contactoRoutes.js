@@ -26,7 +26,7 @@ router.post("/", async (req, res) => {
         // Enviar correo con Resend
         const { data, error } = await resend.emails.send({
             from: "Contacto <onboarding@resend.dev>",
-            to: 'pacofi2005@gmail.com', // Tu email configurado en .env
+            to: 'andremrrv@gmail.com', // Tu email configurado en .env
             subject: `Nuevo mensaje de contacto: ${asunto}`,
             html: `
                 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
