@@ -30,7 +30,7 @@
 <script>
 import { jsPDF } from "jspdf";
 import { useCestaStore } from "../store/cesta.js";
-import logo from "@/assets/Paula.png";
+import logo from "@/assets/carTeis.png";
 import { addFactura } from "../api/facturas.js";
 
 export default {
