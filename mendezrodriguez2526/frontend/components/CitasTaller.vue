@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid my-1 p-3 border rounded-3 shadow-sm bg-light">
         <!-- Título principal -->
-        <h3 class="text-center mt-2 mb-3 d-flex align-items-center justify-content-center" style="color: #7a0f16;">
+        <h3 class="text-center mt-2 mb-3 d-flex align-items-center justify-content-center" style="color: #7AB2B2;">
             <i class="bi bi-person-gear me-2"></i>Lista de Citas
         </h3>
 
@@ -96,7 +96,8 @@
         </div>
                 <!-- Botón de acción: Añadir o Modificar -->
                 <div class="flex-grow-1 d-flex justify-content-center">
-                    <button type="submit" class="btn btn-primary mt-3">
+                    <button type="submit" class="btn btn-primary border-0 mt-3"
+                    style="background-color: #088395;">
                         {{ editando ? "Modificar" : "Añadir" }}
                     </button>
                 </div>
@@ -126,13 +127,17 @@
                     <td>{{ cita.estadoCita}}</td>
                     <td class="align-middle text-center">
                         <!-- Botón para eliminar una cita -->
-                        <button class="btn btn-danger btn-sm border-0 ms-2 me-2 shadow-none rounded-0"
+                        <button class="btn btn-danger btn-sm border-0 ms-2 me-2 shadow-none rounded-1"
+                            style="background-color: #088395"
                             @click="borrarCita(cita.id)">
                             <i class="bi bi-trash"></i>
                         </button>
+                        
+                        
 
                         <!-- Botón para editar una cita -->
-                        <button class="btn btn-warning btn-sm shadow-none rounded-0"
+                        <button class="btn btn-warning btn-sm shadow-none border-0 rounded-1"
+                            style="background-color: #7AB2B2;"
                             @click="editarCita(cita.id)">
                             <i class="bi bi-pencil"></i>
                         </button>
@@ -353,7 +358,7 @@ function formatearFecha(fechaISO) {
 </script>
 <style scoped>
 .table-primary th {
-  background-color:   #f59191 !important;
-  color: black !important;
+  background-color: #ebf4f6 !important;
+  color: #09637e !important;
 }
 </style>

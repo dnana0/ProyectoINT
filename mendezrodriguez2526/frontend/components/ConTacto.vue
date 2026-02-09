@@ -4,7 +4,7 @@
       <div class="col-12 col-md-8 col-lg-6">
         <div class="card shadow-sm border-0">
           <div class="d-flex justify-content-center">
-            <h2 class="text-center mb-3 fw-bold" style="color: #7a0f16;">
+            <h2 class="text-center mb-3 fw-bold" style="color: #7ab2b2">
               <i class="bi bi-envelope-fill me-2"></i>
               Contáctanos
             </h2>
@@ -75,7 +75,8 @@
               <div class="text-center">
                 <button
                   type="submit"
-                  class="btn btn-primary px-5 py-2"
+                  class="btn btn-primary border 0 px-5 py-2"
+                  style="background-color: #088395"
                   :disabled="enviando"
                 >
                   <i class="bi bi-send-fill me-2"></i>
@@ -92,7 +93,10 @@
     <div class="row justify-content-center mt-5">
       <div class="col-12 col-md-6">
         <div class="card shadow-sm border-0">
-          <div class="card-header bg-primary text-white text-center py-3">
+          <div
+            class="card-header text-white text-center py-3"
+            style="background-color: #088395"
+          >
             <h5 class="mb-0">
               <i class="bi bi-geo-alt-fill me-2"></i>
               Nuestra Ubicación
@@ -120,7 +124,6 @@
 import { ref, reactive } from "vue";
 import axios from "axios";
 
-
 //FRONTEND de contacto (ENVIO DE CORREO), con formulario reactivo y función de envío a backend con Resend
 // Formulario reactivo
 const form = reactive({
@@ -143,7 +146,7 @@ async function enviarMensaje() {
       form,
       {
         withCredentials: true,
-      }
+      },
     );
 
     if (response.data.success) {

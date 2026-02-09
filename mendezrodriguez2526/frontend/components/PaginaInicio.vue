@@ -10,7 +10,7 @@
 
     <!-- Contenido por encima del vídeo -->
     <div id="contenido">
-      <h1>Concesionario Empresa Teis</h1>
+      <h1>Concesionario Car Teis</h1>
     </div>
   </div>
 </template>

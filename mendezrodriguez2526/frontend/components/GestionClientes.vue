@@ -6,7 +6,7 @@
   >
     <h3
       class="text-center mt-2 mb-3 d-flex align-items-center justify-content-center"
-      style="color: #7a0f16"
+      style="color: #7ab2b2"
     >
       <i class="bi bi-person-circle fs-3 me-2"></i>
       Gestión de Clientes
@@ -300,6 +300,7 @@
           <button
             type="submit"
             class="btn btn-primary px-4"
+            style="background-color: #088395;"
             :disabled="!nuevoCliente.lopd"
           >
             {{ editando ? "Modificar" : "Guardar" }}
@@ -348,15 +349,17 @@
             <td class="align-middle text-center py-1">
               <button
                 @click="eliminarCliente(cliente.movil)"
-                class="btn btn-danger btn-sm me-2"
+                class="btn btn-danger btn-sm border-0 me-2"
+                style="background-color: #088395"
               >
                 <i class="bi bi-trash"></i>
               </button>
               <button
                 @click="editarCliente(cliente.movil)"
-                class="btn btn-warning btn-sm"
+                class="btn btn-warning border 0 btn-sm"
+                style="background-color: #7ab2b2;"
               >
-                <i class="bi bi-pencil"></i>
+                <i class="bi bi-pencil" ></i>
               </button>
               <button
                 v-if="!cliente.historico"
@@ -510,7 +513,10 @@ const clientesPaginados = computed(() => {
 });
 
 const cargarClientes = () => {
-  console.log("cargarClientes() called, mostrarHistorico=", mostrarHistorico.value);
+  console.log(
+    "cargarClientes() called, mostrarHistorico=",
+    mostrarHistorico.value,
+  );
   getClientes(mostrarHistorico.value)
     .then((data) => {
       console.log("getClientes returned", data?.length, data);
@@ -1057,8 +1063,8 @@ const validarPassword = () => {
 }
 
 .table-primary th {
-  background-color: #f59191 !important;
-  color: black !important;
+  background-color: #ebf4f6 !important;
+  color: #09637e !important;
 }
 
 /* Visual for readonly/locked inputs when editing a cliente */

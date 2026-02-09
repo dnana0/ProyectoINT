@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-dark bg-danger sticky-top navbar-expand-lg">
+  <nav class="navbar navbar-dark bg-danger sticky-top navbar-expand-lg rounded-1">
 
     <div class="container-fluid">
       <!-- Marca o logo -->
@@ -46,15 +46,15 @@
         <!-- BUSCADOR alineado a la derecha -->
         <form class="d-flex ms-auto me-2" role="search" @submit.prevent="buscar" v-if="isAdmin">
         <input
-        class="form-control form-control-sm me-2 rounded-0"
+        class="form-control form-control-sm me-2 rounded-1"
         type="search"
-        placeholder="Buscar..."
+        placeholder=""
         aria-label="Buscar"
         v-model="query"
-        style="width: 140px;"
+        style="width: 140px; background-color: #EBF4F6;"
         />
-        <button class="btn btn-light btn-sm rounded-0" type="submit">
-        <i class="bi bi-search"></i>
+        <button class="btn btn-light btn-sm rounded-1 border-0" type="submit" style="background-color: #088395;">
+        <i class="bi bi-search" style="color: white;"></i>
         </button>
         </form>
 
@@ -86,7 +86,7 @@
           aria-expanded="false"
           >
           <p class=" mb-0 ">{{userName}}</p>
-          <i class="bi bi-person fs-4" style="background-color: #b02a37;"></i>
+          <i class="bi bi-person fs-4" style="background-color: none;"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end">
             <!-- Mostra “Acceso/Registro” se NON hai usuario logueado -->
