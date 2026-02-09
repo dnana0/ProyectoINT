@@ -35,7 +35,8 @@
       <div class="text-center">
         <button
           type="button"
-          class="btn btn-primary px-4"
+          class="btn btn-primary px-4 border-0"
+          style="background-color: #088395"
           @click="grabarNoticia"
         >
           Publicar
@@ -176,4 +177,8 @@ const eliminarNoticia = async (id) => {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.btn-primary {
+ margin-top: 1em;
+}
+</style>
