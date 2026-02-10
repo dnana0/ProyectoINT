@@ -123,6 +123,7 @@
 <script setup>
 import { ref, reactive } from "vue";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 //FRONTEND de contacto (ENVIO DE CORREO), con formulario reactivo y función de envío a backend con Resend
 // Formulario reactivo
@@ -150,20 +151,38 @@ async function enviarMensaje() {
     );
 
     if (response.data.success) {
-      alert("Mensaje enviado con éxito.");
+      Swal.fire({
+        icon: "success",
+        title: "¡Mensaje enviado!",
+        text: "Tu mensaje ha sido enviado correctamente. Nos pondremos en contacto pronto.",
+        confirmButtonText: "Aceptar",
+        confirmButtonColor: "#088395",
+      });
+      // Limpiar formulario
+      form.nombre = "";
+      form.email = "";
+      form.asunto = "";
+      form.mensaje = "";
     } else {
-      alert("No se pudo enviar el mensaje.");
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "No se pudo enviar el mensaje. Por favor, intente de nuevo.",
+        confirmButtonText: "Aceptar",
+        confirmButtonColor: "#088395",
+      });
     }
   } catch (error) {
     console.error("Error enviando mensaje:", error);
-    alert("Error al enviar el mensaje.");
+    Swal.fire({
+      icon: "error",
+      title: "Error al enviar",
+      text: "Ha ocurrido un error al enviar el mensaje. Por favor, intente más tarde.",
+      confirmButtonText: "Aceptar",
+      confirmButtonColor: "#088395",
+    });
   } finally {
     enviando.value = false;
-    // Limpiar formulario
-    form.nombre = "";
-    form.email = "";
-    form.asunto = "";
-    form.mensaje = "";
   }
 }
 </script>

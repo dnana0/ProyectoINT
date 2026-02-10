@@ -361,6 +361,7 @@
       >
         <thead>
           <tr class="table-primary text-center">
+            <th>Imagen</th>
             <th>Matrícula</th>
             <th>Marca</th>
             <th>Modelo</th>
@@ -371,6 +372,15 @@
         </thead>
         <tbody>
           <tr v-for="modelo in modelos" :key="modelo._id" class="text-center">
+            <td>
+              <img 
+                v-if="modelo.imagen"
+                :src="`http://localhost:5000${modelo.imagen}`"
+                alt="Vehículo"
+                style="width: 60px; height: 60px; object-fit: cover; border-radius: 4px;"
+              />
+              <span v-else class="text-muted">Sin imagen</span>
+            </td>
             <td>{{ modelo.matricula }}</td>
             <td>{{ modelo.marca }}</td>
             <td>{{ modelo.modelo }}</td>
@@ -383,10 +393,7 @@
             <td>
               <button
                 class="btn btn-sm btn-primary me-2"
-                @click="
-                  editando = true;
-                  vehiculo = { ...modelo };
-                "
+                @click="editarVehiculo(modelo)"
               >
                 <i class="bi bi-pencil"></i>
               </button>
@@ -401,7 +408,7 @@
 <script setup>
 import Swal from "sweetalert2";
 import { ref, computed, onMounted } from "vue";
-import { addArticulo, getArticulos } from "@/api/articulos.js";
+import { addArticulo, updateArticulo, getArticulos } from "@/api/articulos.js";
 import provmuniData from "@/data/provmuni.json";
 import { jsPDF } from "jspdf";
 import "jspdf-autotable";
@@ -425,13 +432,13 @@ const vehiculo = ref({
   matricula: "",
   marca: "",
   modelo: "",
-  anio: "",
-  estado: "",
-  kilometros: "",
-  precio: "",
+  anio: 0,
+  estado: "disponible",
+  kilometros: 0,
+  precio: 0,
   combustible: "",
   transmision: "",
-  potencia_cv: "",
+  potencia_cv: 0,
   descripcion: "",
   ubicacion: {
     provincia: "",
@@ -442,8 +449,6 @@ const vehiculo = ref({
     telefono: "",
     email: "",
   },
-  fecha_publicacion: "",
-  estado: "disponible",
 });
 
 const editando = ref(false);
@@ -531,6 +536,12 @@ const validarEmail = () => {
   }
   const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   emailValido.value = regex.test(email);
+};
+
+// Editar vehículo
+const editarVehiculo = (modelo) => {
+  editando.value = true;
+  vehiculo.value = { ...modelo };
 };
 
 // Enviar datos al backend
@@ -633,39 +644,69 @@ const guardarVehiculo = async () => {
   }
 
   try {
-    const formData = new FormData();
+    if (editando.value) {
+      // Modo edición: actualizar artículo existente
+      let updateData = vehiculo.value;
 
-    if (archivo.value) {
-      formData.append("imagen", archivo.value);
-    }
+      // Si hay imagen nueva, usar FormData
+      if (archivo.value) {
+        const formData = new FormData();
+        formData.append("imagen", archivo.value);
+        formData.append("vehiculo", JSON.stringify(vehiculo.value));
+        updateData = formData;
+      }
 
-    formData.append("vehiculo", JSON.stringify(vehiculo.value));
-
-    const nuevo = await addArticulo(formData);
-
-    if (nuevo && nuevo._id) {
-      Swal.fire({
-        icon: "success",
-        title: "Vehículo guardado",
-        text: "El vehículo ha sido guardado correctamente.",
-        timer: 2000,
-        showConfirmButton: false,
-      });
+      const resultado = await updateArticulo(vehiculo.value._id, updateData);
+      if (resultado) {
+        Swal.fire({
+          icon: "success",
+          title: "Vehículo actualizado",
+          text: "El vehículo ha sido actualizado correctamente.",
+          timer: 2000,
+          showConfirmButton: false,
+        });
+        editando.value = false;
+        cargarModelos();
+      }
     } else {
-      console.error("Error al guardar el vehículo");
+      // Modo creación: crear nuevo artículo
+      const formData = new FormData();
+
+      if (archivo.value) {
+        formData.append("imagen", archivo.value);
+      }
+
+      formData.append("vehiculo", JSON.stringify(vehiculo.value));
+
+      const nuevo = await addArticulo(formData);
+
+      if (nuevo && nuevo._id) {
+        Swal.fire({
+          icon: "success",
+          title: "Vehículo guardado",
+          text: "El vehículo ha sido guardado correctamente.",
+          timer: 2000,
+          showConfirmButton: false,
+        });
+        cargarModelos();
+      } else {
+        console.error("Error al guardar el vehículo");
+      }
     }
+
+    // Limpiar formulario
     Object.assign(vehiculo.value, {
       tipo: "",
       matricula: "",
       marca: "",
       modelo: "",
-      anio: "",
+      anio: 0,
       estado: "disponible",
-      kilometros: "",
-      precio: "",
+      kilometros: 0,
+      precio: 0,
       combustible: "",
       transmision: "",
-      potencia_cv: "",
+      potencia_cv: 0,
       descripcion: "",
       ubicacion: {
         provincia: "",
@@ -676,11 +717,16 @@ const guardarVehiculo = async () => {
         telefono: "",
         email: "",
       },
-      fecha_publicacion: "",
     });
     archivo.value = null;
   } catch (error) {
     console.error("Error al guardar:", error);
+    Swal.fire({
+      icon: "error",
+      title: "Error",
+      text: "No se pudo guardar el vehículo: " + error.message,
+      showConfirmButton: true,
+    });
   }
 };
 

@@ -25,8 +25,18 @@ export async function addArticulo(formData) {
 }
 
 // Actualizar artículo
-export async function updateArticulo(id, articulo) {
-  const res = await axios.put(`${API_URL}/${id}`, articulo);
+export async function updateArticulo(id, data) {
+  // Si es FormData (para actualizar con imagen), usar multipart/form-data
+  if (data instanceof FormData) {
+    const res = await axios.put(`${API_URL}/${id}`, data, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
+    return res.data;
+  }
+  // Si es un objeto JSON (para actualizar sin imagen)
+  const res = await axios.put(`${API_URL}/${id}`, data);
   return res.data;
 }
 
