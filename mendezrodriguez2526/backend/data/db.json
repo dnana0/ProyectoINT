@@ -17,6 +17,22 @@
       "id": "admin01"
     },
     {
+      "dni": "12312312A",
+      "fecha_alta": "2024-02-08",
+      "nombre": "Usuario",
+      "apellidos": "Ejemplo",
+      "email": "user@carteis.com",
+      "movil": "888888888",
+      "direccion": "Sistema",
+      "provincia": "Madrid",
+      "municipio": "Madrid",
+      "historico": true,
+      "lopd": true,
+      "password": "$2a$10$nuhat1obIfQryxbs/B/TbO8SGqG0tEVWJ5kizOl/A6NAxowJbueJy",
+      "tipo": "user",
+      "id": "admin01"
+    },
+    {
       "dni": "73289465B",
       "fecha_alta": "2022-02-14",
       "nombre": "Laura",

@@ -1,0 +1,2226 @@
+[{
+  "_id": {
+    "$oid": "6969f8d0f3fea47ea0b2959e"
+  },
+  "items": [
+    {
+      "nombre": "Volkswagen Golf",
+      "precio": 15800,
+      "cantidad": 1,
+      "total": 15800,
+      "_id": {
+        "$oid": "6969f8d0f3fea47ea0b2959f"
+      }
+    }
+  ],
+  "totalFactura": 15800,
+  "fecha": {
+    "$date": "2026-01-16T08:37:36.217Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696f2cd9c52c72f56fdcf9a1"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "696f2cd9c52c72f56fdcf9a2"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-20T07:20:57.058Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696f2d73c52c72f56fdcf9a5"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "696f2d73c52c72f56fdcf9a6"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-20T07:23:31.394Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69709d79de2c831204afb9bd"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "69709d79de2c831204afb9be"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T09:33:45.623Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69709d98de2c831204afb9c0"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "69709d98de2c831204afb9c1"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T09:34:16.897Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69709daade2c831204afb9c4"
+  },
+  "items": [
+    {
+      "nombre": "Volkswagen Golf",
+      "precio": 15800,
+      "cantidad": 1,
+      "total": 15800,
+      "_id": {
+        "$oid": "69709daade2c831204afb9c5"
+      }
+    }
+  ],
+  "totalFactura": 15800,
+  "fecha": {
+    "$date": "2026-01-21T09:34:34.405Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69709e55de2c831204afb9c7"
+  },
+  "items": [
+    {
+      "nombre": "Volkswagen Golf",
+      "precio": 15800,
+      "cantidad": 1,
+      "total": 15800,
+      "_id": {
+        "$oid": "69709e55de2c831204afb9c8"
+      }
+    }
+  ],
+  "totalFactura": 15800,
+  "fecha": {
+    "$date": "2026-01-21T09:37:25.033Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69709e58de2c831204afb9ca"
+  },
+  "items": [
+    {
+      "nombre": "Volkswagen Golf",
+      "precio": 15800,
+      "cantidad": 1,
+      "total": 15800,
+      "_id": {
+        "$oid": "69709e58de2c831204afb9cb"
+      }
+    }
+  ],
+  "totalFactura": 15800,
+  "fecha": {
+    "$date": "2026-01-21T09:37:28.641Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69709e63de2c831204afb9cd"
+  },
+  "items": [
+    {
+      "nombre": "Volkswagen Golf",
+      "precio": 15800,
+      "cantidad": 1,
+      "total": 15800,
+      "_id": {
+        "$oid": "69709e63de2c831204afb9ce"
+      }
+    }
+  ],
+  "totalFactura": 15800,
+  "fecha": {
+    "$date": "2026-01-21T09:37:39.473Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69709e79de2c831204afb9d1"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "69709e79de2c831204afb9d2"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T09:38:01.527Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69709f27de2c831204afb9d4"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "69709f27de2c831204afb9d5"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T09:40:55.627Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69709f2dde2c831204afb9d7"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "69709f2dde2c831204afb9d8"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T09:41:01.268Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69709f30de2c831204afb9da"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "69709f30de2c831204afb9db"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T09:41:04.493Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69709f35de2c831204afb9dd"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "69709f35de2c831204afb9de"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T09:41:09.388Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69709f36de2c831204afb9e0"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "69709f36de2c831204afb9e1"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T09:41:10.595Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69709f36de2c831204afb9e3"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "69709f36de2c831204afb9e4"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T09:41:10.607Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a0e4de2c831204afb9e7"
+  },
+  "items": [
+    {
+      "nombre": "Volkswagen Golf",
+      "precio": 15800,
+      "cantidad": 1,
+      "total": 15800,
+      "_id": {
+        "$oid": "6970a0e4de2c831204afb9e8"
+      }
+    }
+  ],
+  "totalFactura": 15800,
+  "fecha": {
+    "$date": "2026-01-21T09:48:20.783Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a0e5de2c831204afb9ea"
+  },
+  "items": [
+    {
+      "nombre": "Volkswagen Golf",
+      "precio": 15800,
+      "cantidad": 1,
+      "total": 15800,
+      "_id": {
+        "$oid": "6970a0e5de2c831204afb9eb"
+      }
+    }
+  ],
+  "totalFactura": 15800,
+  "fecha": {
+    "$date": "2026-01-21T09:48:21.012Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a230de2c831204afb9ed"
+  },
+  "items": [
+    {
+      "nombre": "Volkswagen Golf",
+      "precio": 15800,
+      "cantidad": 1,
+      "total": 15800,
+      "_id": {
+        "$oid": "6970a230de2c831204afb9ee"
+      }
+    }
+  ],
+  "totalFactura": 15800,
+  "fecha": {
+    "$date": "2026-01-21T09:53:52.478Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afb9f1"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afb9f2"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.402Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afb9f4"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afb9f5"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.415Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba03"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba04"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.512Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba06"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba07"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.557Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba09"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba0a"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.568Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba0c"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba0d"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.581Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba0f"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba10"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.594Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba12"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba13"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.632Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba15"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba16"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.645Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba18"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba19"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.661Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba1b"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba1c"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.674Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba1e"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba1f"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.716Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba21"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba22"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.727Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba24"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba25"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.741Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba27"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba28"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.755Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba2a"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba2b"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.788Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba2d"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba2e"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.797Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba30"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba31"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.805Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba33"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba34"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.824Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba36"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba37"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.841Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba39"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba3a"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.864Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba3c"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba3d"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.889Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba3f"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba40"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.902Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba42"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba43"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.927Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba45"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba46"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.939Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba48"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba49"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.948Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba4b"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba4c"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.957Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba4e"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba4f"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.968Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bdde2c831204afba51"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bdde2c831204afba52"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:33.977Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bede2c831204afba54"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bede2c831204afba55"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:34.003Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bede2c831204afba57"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bede2c831204afba58"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:34.014Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bede2c831204afba5a"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bede2c831204afba5b"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:34.023Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bede2c831204afba5d"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bede2c831204afba5e"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:34.036Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bede2c831204afba60"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bede2c831204afba61"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:34.047Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7bede2c831204afba63"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7bede2c831204afba64"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:34.058Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a7c5de2c831204afba66"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a7c5de2c831204afba67"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:17:41.693Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a828de2c831204afba69"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a828de2c831204afba6a"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:19:20.068Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a830de2c831204afba6c"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a830de2c831204afba6d"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:19:28.925Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a838de2c831204afba6f"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a838de2c831204afba70"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:19:36.813Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a83ade2c831204afba72"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a83ade2c831204afba73"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:19:38.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a840de2c831204afba75"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a840de2c831204afba76"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:19:44.866Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a842de2c831204afba78"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a842de2c831204afba79"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:19:46.324Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a84ade2c831204afba7b"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a84ade2c831204afba7c"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:19:54.789Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a8cbde2c831204afba7e"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a8cbde2c831204afba7f"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:22:03.862Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a8e2de2c831204afba81"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a8e2de2c831204afba82"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:22:26.785Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a8e4de2c831204afba84"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a8e4de2c831204afba85"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:22:28.673Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a8e6de2c831204afba87"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a8e6de2c831204afba88"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:22:30.011Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970a940de2c831204afba8b"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970a940de2c831204afba8c"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:24:00.435Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970aa7ade2c831204afba91"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6970aa7ade2c831204afba92"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-21T10:29:14.886Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6970aaf0de2c831204afba95"
+  },
+  "items": [
+    {
+      "nombre": "Tesla Model 3",
+      "precio": 32500,
+      "cantidad": 1,
+      "total": 32500,
+      "_id": {
+        "$oid": "6970aaf0de2c831204afba96"
+      }
+    }
+  ],
+  "totalFactura": 32500,
+  "fecha": {
+    "$date": "2026-01-21T10:31:12.522Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971cbda7198c845cc0b6253"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6971cbda7198c845cc0b6254"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-22T07:03:54.300Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971ccbd7198c845cc0b6257"
+  },
+  "items": [
+    {
+      "nombre": "Toyota Corolla",
+      "precio": 13500,
+      "cantidad": 1,
+      "total": 13500,
+      "_id": {
+        "$oid": "6971ccbd7198c845cc0b6258"
+      }
+    }
+  ],
+  "totalFactura": 13500,
+  "fecha": {
+    "$date": "2026-01-22T07:07:41.345Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971ce8b7198c845cc0b625b"
+  },
+  "items": [
+    {
+      "nombre": "Toyota Corolla",
+      "precio": 13500,
+      "cantidad": 1,
+      "total": 13500,
+      "_id": {
+        "$oid": "6971ce8b7198c845cc0b625c"
+      }
+    }
+  ],
+  "totalFactura": 13500,
+  "fecha": {
+    "$date": "2026-01-22T07:15:23.919Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d1077198c845cc0b625e"
+  },
+  "items": [
+    {
+      "nombre": "Toyota Corolla",
+      "precio": 13500,
+      "cantidad": 1,
+      "total": 13500,
+      "_id": {
+        "$oid": "6971d1077198c845cc0b625f"
+      }
+    }
+  ],
+  "totalFactura": 13500,
+  "fecha": {
+    "$date": "2026-01-22T07:25:59.712Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d13b7198c845cc0b6262"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6971d13b7198c845cc0b6263"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-22T07:26:51.014Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d16b7198c845cc0b6265"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6971d16b7198c845cc0b6266"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-22T07:27:39.489Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d1887198c845cc0b6268"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6971d1887198c845cc0b6269"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-22T07:28:08.870Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d18a7198c845cc0b626b"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6971d18a7198c845cc0b626c"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-22T07:28:10.494Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d18c7198c845cc0b626e"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6971d18c7198c845cc0b626f"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-22T07:28:12.590Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d1907198c845cc0b6271"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6971d1907198c845cc0b6272"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-22T07:28:16.483Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d19b7198c845cc0b6274"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6971d19b7198c845cc0b6275"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-22T07:28:27.824Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d21e7198c845cc0b6279"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6971d21e7198c845cc0b627a"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-22T07:30:38.885Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d3cd7198c845cc0b627d"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6971d3cd7198c845cc0b627e"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-22T07:37:49.585Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d46c4ca055e5e3f59208"
+  },
+  "items": [
+    {
+      "nombre": "Toyota Corolla",
+      "precio": 13500,
+      "cantidad": 1,
+      "total": 13500,
+      "_id": {
+        "$oid": "6971d46c4ca055e5e3f59209"
+      }
+    }
+  ],
+  "totalFactura": 13500,
+  "fecha": {
+    "$date": "2026-01-22T07:40:28.067Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d63cd355f99a4b2d6f88"
+  },
+  "items": [
+    {
+      "nombre": "Toyota Corolla",
+      "precio": 13500,
+      "cantidad": 1,
+      "total": 13500,
+      "_id": {
+        "$oid": "6971d63cd355f99a4b2d6f89"
+      }
+    }
+  ],
+  "totalFactura": 13500,
+  "fecha": {
+    "$date": "2026-01-22T07:48:12.858Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d69dd355f99a4b2d6f8c"
+  },
+  "items": [
+    {
+      "nombre": "Toyota Corolla",
+      "precio": 13500,
+      "cantidad": 1,
+      "total": 13500,
+      "_id": {
+        "$oid": "6971d69dd355f99a4b2d6f8d"
+      }
+    }
+  ],
+  "totalFactura": 13500,
+  "fecha": {
+    "$date": "2026-01-22T07:49:49.342Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d6acd355f99a4b2d6f8f"
+  },
+  "items": [
+    {
+      "nombre": "Toyota Corolla",
+      "precio": 13500,
+      "cantidad": 1,
+      "total": 13500,
+      "_id": {
+        "$oid": "6971d6acd355f99a4b2d6f90"
+      }
+    }
+  ],
+  "totalFactura": 13500,
+  "fecha": {
+    "$date": "2026-01-22T07:50:04.418Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d6bbd355f99a4b2d6f92"
+  },
+  "items": [
+    {
+      "nombre": "Toyota Corolla",
+      "precio": 13500,
+      "cantidad": 1,
+      "total": 13500,
+      "_id": {
+        "$oid": "6971d6bbd355f99a4b2d6f93"
+      }
+    }
+  ],
+  "totalFactura": 13500,
+  "fecha": {
+    "$date": "2026-01-22T07:50:19.588Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d6d9d355f99a4b2d6f95"
+  },
+  "items": [
+    {
+      "nombre": "Toyota Corolla",
+      "precio": 13500,
+      "cantidad": 1,
+      "total": 13500,
+      "_id": {
+        "$oid": "6971d6d9d355f99a4b2d6f96"
+      }
+    }
+  ],
+  "totalFactura": 13500,
+  "fecha": {
+    "$date": "2026-01-22T07:50:49.342Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d6dcd355f99a4b2d6f98"
+  },
+  "items": [
+    {
+      "nombre": "Toyota Corolla",
+      "precio": 13500,
+      "cantidad": 1,
+      "total": 13500,
+      "_id": {
+        "$oid": "6971d6dcd355f99a4b2d6f99"
+      }
+    }
+  ],
+  "totalFactura": 13500,
+  "fecha": {
+    "$date": "2026-01-22T07:50:52.952Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d6f7d355f99a4b2d6f9b"
+  },
+  "items": [
+    {
+      "nombre": "Toyota Corolla",
+      "precio": 13500,
+      "cantidad": 1,
+      "total": 13500,
+      "_id": {
+        "$oid": "6971d6f7d355f99a4b2d6f9c"
+      }
+    }
+  ],
+  "totalFactura": 13500,
+  "fecha": {
+    "$date": "2026-01-22T07:51:19.223Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d6fdd355f99a4b2d6f9e"
+  },
+  "items": [
+    {
+      "nombre": "Toyota Corolla",
+      "precio": 13500,
+      "cantidad": 1,
+      "total": 13500,
+      "_id": {
+        "$oid": "6971d6fdd355f99a4b2d6f9f"
+      }
+    }
+  ],
+  "totalFactura": 13500,
+  "fecha": {
+    "$date": "2026-01-22T07:51:25.844Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d70ed355f99a4b2d6fa2"
+  },
+  "items": [
+    {
+      "nombre": "Tesla Model 3",
+      "precio": 32500,
+      "cantidad": 1,
+      "total": 32500,
+      "_id": {
+        "$oid": "6971d70ed355f99a4b2d6fa3"
+      }
+    }
+  ],
+  "totalFactura": 32500,
+  "fecha": {
+    "$date": "2026-01-22T07:51:42.104Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d728d355f99a4b2d6fa5"
+  },
+  "items": [
+    {
+      "nombre": "Tesla Model 3",
+      "precio": 32500,
+      "cantidad": 1,
+      "total": 32500,
+      "_id": {
+        "$oid": "6971d728d355f99a4b2d6fa6"
+      }
+    }
+  ],
+  "totalFactura": 32500,
+  "fecha": {
+    "$date": "2026-01-22T07:52:08.552Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d734d355f99a4b2d6fa8"
+  },
+  "items": [
+    {
+      "nombre": "Tesla Model 3",
+      "precio": 32500,
+      "cantidad": 1,
+      "total": 32500,
+      "_id": {
+        "$oid": "6971d734d355f99a4b2d6fa9"
+      }
+    }
+  ],
+  "totalFactura": 32500,
+  "fecha": {
+    "$date": "2026-01-22T07:52:20.635Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d73bd355f99a4b2d6fab"
+  },
+  "items": [
+    {
+      "nombre": "Tesla Model 3",
+      "precio": 32500,
+      "cantidad": 1,
+      "total": 32500,
+      "_id": {
+        "$oid": "6971d73bd355f99a4b2d6fac"
+      }
+    }
+  ],
+  "totalFactura": 32500,
+  "fecha": {
+    "$date": "2026-01-22T07:52:27.330Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d747d355f99a4b2d6faf"
+  },
+  "items": [
+    {
+      "nombre": "Volkswagen Golf",
+      "precio": 15800,
+      "cantidad": 1,
+      "total": 15800,
+      "_id": {
+        "$oid": "6971d747d355f99a4b2d6fb0"
+      }
+    }
+  ],
+  "totalFactura": 15800,
+  "fecha": {
+    "$date": "2026-01-22T07:52:39.451Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d7f8d355f99a4b2d6fb2"
+  },
+  "items": [
+    {
+      "nombre": "Volkswagen Golf",
+      "precio": 15800,
+      "cantidad": 1,
+      "total": 15800,
+      "_id": {
+        "$oid": "6971d7f8d355f99a4b2d6fb3"
+      }
+    }
+  ],
+  "totalFactura": 15800,
+  "fecha": {
+    "$date": "2026-01-22T07:55:36.852Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d80cd355f99a4b2d6fb5"
+  },
+  "items": [
+    {
+      "nombre": "Volkswagen Golf",
+      "precio": 15800,
+      "cantidad": 1,
+      "total": 15800,
+      "_id": {
+        "$oid": "6971d80cd355f99a4b2d6fb6"
+      }
+    }
+  ],
+  "totalFactura": 15800,
+  "fecha": {
+    "$date": "2026-01-22T07:55:55.995Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d8add355f99a4b2d6fb9"
+  },
+  "items": [
+    {
+      "nombre": "Volkswagen Golf",
+      "precio": 15800,
+      "cantidad": 1,
+      "total": 15800,
+      "_id": {
+        "$oid": "6971d8add355f99a4b2d6fba"
+      }
+    }
+  ],
+  "totalFactura": 15800,
+  "fecha": {
+    "$date": "2026-01-22T07:58:37.249Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971d965d80df4fccd75a46f"
+  },
+  "items": [
+    {
+      "nombre": "Volkswagen Golf",
+      "precio": 15800,
+      "cantidad": 1,
+      "total": 15800,
+      "_id": {
+        "$oid": "6971d965d80df4fccd75a470"
+      }
+    }
+  ],
+  "totalFactura": 15800,
+  "fecha": {
+    "$date": "2026-01-22T08:01:41.694Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971da43d80df4fccd75a473"
+  },
+  "items": [
+    {
+      "nombre": "Volkswagen Golf",
+      "precio": 15800,
+      "cantidad": 1,
+      "total": 15800,
+      "_id": {
+        "$oid": "6971da43d80df4fccd75a474"
+      }
+    }
+  ],
+  "totalFactura": 15800,
+  "fecha": {
+    "$date": "2026-01-22T08:05:23.161Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971da61d80df4fccd75a477"
+  },
+  "items": [
+    {
+      "nombre": "Volkswagen Golf",
+      "precio": 15800,
+      "cantidad": 1,
+      "total": 15800,
+      "_id": {
+        "$oid": "6971da61d80df4fccd75a478"
+      }
+    }
+  ],
+  "totalFactura": 15800,
+  "fecha": {
+    "$date": "2026-01-22T08:05:53.515Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971dae0d80df4fccd75a47b"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6971dae0d80df4fccd75a47c"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-22T08:08:00.130Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971db14d80df4fccd75a47f"
+  },
+  "items": [
+    {
+      "nombre": "Volkswagen Golf",
+      "precio": 15800,
+      "cantidad": 1,
+      "total": 15800,
+      "_id": {
+        "$oid": "6971db14d80df4fccd75a480"
+      }
+    }
+  ],
+  "totalFactura": 15800,
+  "fecha": {
+    "$date": "2026-01-22T08:08:52.197Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6971db2dd80df4fccd75a483"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "6971db2dd80df4fccd75a484"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-22T08:09:17.898Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69732f0f3adabff3b98a113a"
+  },
+  "items": [
+    {
+      "nombre": "Peugeot 208",
+      "precio": 9700,
+      "cantidad": 1,
+      "total": 9700,
+      "_id": {
+        "$oid": "69732f0f3adabff3b98a113b"
+      }
+    }
+  ],
+  "totalFactura": 9700,
+  "fecha": {
+    "$date": "2026-01-23T08:19:27.274Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,306 @@
+[{
+  "_id": {
+    "$oid": "6909b9faf474abc658dc6e54"
+  },
+  "tipo": "coche",
+  "marca": "Toyota",
+  "modelo": "Corolla",
+  "anio": 2019,
+  "kilometros": 73500,
+  "precio": 13500,
+  "combustible": "Gasolina",
+  "transmision": "manual",
+  "potencia_cv": 122,
+  "descripcion": "Toyota Corolla 2019 en muy buen estado, único propietario, revisiones al día.",
+  "ubicacion": {
+    "ciudad": "Santiago de Compostela",
+    "provincia": "Coruña, A"
+  },
+  "contacto": {
+    "nombre": "Juan Pérez",
+    "telefono": "+34 612 345 678",
+    "email": "juan.perez@example.com"
+  },
+  "fecha_publicacion": {
+    "$date": "2025-11-04T00:00:00.000Z"
+  },
+  "estado": "disponible",
+  "matricula": "ABC1213",
+  "imagen": "/uploads/1765359403572.jpg"
+},
+{
+  "_id": {
+    "$oid": "690b1a9f7e347ebd181254a7"
+  },
+  "tipo": "coche",
+  "marca": "Volkswagen",
+  "modelo": "Golf",
+  "anio": 2020,
+  "kilometros": 48000,
+  "precio": 15800,
+  "combustible": "Diésel",
+  "transmision": "manual",
+  "potencia_cv": 115,
+  "descripcion": "Volkswagen Golf 2020 con bajo consumo y mantenimiento reciente. ITV pasada.",
+  "ubicacion": {
+    "ciudad": "Vigo",
+    "provincia": "Pontevedra"
+  },
+  "contacto": {
+    "nombre": "María López",
+    "telefono": "+34 698 112 903",
+    "email": "maria.lopez@example.com"
+  },
+  "fecha_publicacion": {
+    "$date": "2025-11-03T00:00:00.000Z"
+  },
+  "estado": "reservado",
+  "matricula": "BBD1245",
+  "imagen": "/uploads/1765359433403.jpeg"
+},
+{
+  "_id": {
+    "$oid": "690b1a9f7e347ebd181254a8"
+  },
+  "tipo": "coche",
+  "marca": "Peugeot",
+  "modelo": "208",
+  "anio": 2018,
+  "kilometros": 91000,
+  "precio": 9700,
+  "combustible": "Gasolina",
+  "transmision": "automatica",
+  "potencia_cv": 100,
+  "descripcion": "Peugeot 208 automático en excelente estado interior, ideal para ciudad.",
+  "ubicacion": {
+    "ciudad": "Xove",
+    "provincia": "Lugo"
+  },
+  "contacto": {
+    "nombre": "Carlos Fernández",
+    "telefono": "+34 611 223 345",
+    "email": "carlos.fernandez@example.com"
+  },
+  "fecha_publicacion": {
+    "$date": "2025-10-28T00:00:00.000Z"
+  },
+  "estado": "disponible",
+  "matricula": "CAD4567",
+  "imagen": "/uploads/1765359471380.jpg"
+},
+{
+  "_id": {
+    "$oid": "690b1a9f7e347ebd181254a9"
+  },
+  "tipo": "coche",
+  "marca": "Tesla",
+  "modelo": "Model 3",
+  "anio": 2021,
+  "kilometros": 32000,
+  "precio": 32500,
+  "combustible": "Eléctrico",
+  "transmision": "automatica",
+  "potencia_cv": 283,
+  "descripcion": "Tesla Model 3 Long Range con Autopilot y mantenimiento oficial.",
+  "ubicacion": {
+    "ciudad": "Ourense",
+    "provincia": "Ourense"
+  },
+  "contacto": {
+    "nombre": "Laura González",
+    "telefono": "+34 600 889 451",
+    "email": "laura.gonzalez@example.com"
+  },
+  "fecha_publicacion": {
+    "$date": "2025-10-20T00:00:00.000Z"
+  },
+  "estado": "disponible",
+  "matricula": "ABF5467",
+  "imagen": "/uploads/1765359536073.jpg"
+},
+{
+  "_id": {
+    "$oid": "690b1a9f7e347ebd181254aa"
+  },
+  "tipo": "coche",
+  "marca": "Seat",
+  "modelo": "León",
+  "anio": 2017,
+  "kilometros": 112000,
+  "precio": 8900,
+  "combustible": "Diésel",
+  "transmision": "manual",
+  "color": "gris oscuro",
+  "puertas": 5,
+  "potencia_cv": 105,
+  "descripcion": "Seat León 1.6 TDI, cadena de distribución cambiada, muy cuidado.",
+  "ubicacion": {
+    "ciudad": "Lugo",
+    "provincia": "Lugo"
+  },
+  "contacto": {
+    "nombre": "Andrés Castro",
+    "telefono": "+34 622 774 982",
+    "email": "andres.castro@example.com"
+  },
+  "fecha_publicacion": {
+    "$date": "2025-09-15T00:00:00.000Z"
+  },
+  "estado": "disponible",
+  "matricula": "1111HHH",
+  "imagen": "/uploads/1765359357642.jpeg"
+},
+{
+  "_id": {
+    "$oid": "690b1a9f7e347ebd181254ab"
+  },
+  "tipo": "coche",
+  "marca": "Renault",
+  "modelo": "Clio",
+  "anio": 2016,
+  "kilometros": 125000,
+  "precio": 6800,
+  "combustible": "Gasolina",
+  "transmision": "automatica",
+  "potencia_cv": 90,
+  "descripcion": "Renault Clio 1.2, consumo muy bajo, revisado y sin accidentes.",
+  "ubicacion": {
+    "ciudad": "Cenlle",
+    "provincia": "Ourense"
+  },
+  "contacto": {
+    "nombre": "Beatriz Méndez",
+    "telefono": "+34 690 440 871",
+    "email": "beatriz.mendez@example.com"
+  },
+  "fecha_publicacion": {
+    "$date": "2025-08-10T00:00:00.000Z"
+  },
+  "estado": "disponible",
+  "matricula": "FDG4564",
+  "imagen": "/uploads/1765359123731.jpg"
+},
+{
+  "_id": {
+    "$oid": "691d87dc52ff1742a151b3a6"
+  },
+  "tipo": "coche",
+  "matricula": "1145RRR",
+  "marca": "Omoda",
+  "modelo": "5",
+  "anio": 2025,
+  "estado": "disponible",
+  "kilometros": 125,
+  "precio": 12500,
+  "combustible": "Híbrido",
+  "transmision": "automatica",
+  "potencia_cv": 125,
+  "descripcion": "Nuevo, gris",
+  "ubicacion": {
+    "provincia": "Coruña, A",
+    "ciudad": "Santiago de Compostela"
+  },
+  "contacto": {
+    "nombre": "Juan Carlos",
+    "telefono": "63215646",
+    "email": "algo@algo.es"
+  },
+  "fecha_publicacion": {
+    "$date": "2025-11-19T00:00:00.000Z"
+  },
+  "__v": 0,
+  "imagen": "/uploads/1763581650929.jpeg"
+},
+{
+  "_id": {
+    "$oid": "691d983cf6a77ea57d33c6f4"
+  },
+  "tipo": "furgoneta",
+  "matricula": "AMD444",
+  "marca": "Fiat",
+  "modelo": "Doblo",
+  "anio": 2016,
+  "estado": "disponible",
+  "kilometros": 120000,
+  "precio": 6000,
+  "combustible": "Diésel",
+  "transmision": "manual",
+  "potencia_cv": 125,
+  "descripcion": "Revisión e ITV",
+  "ubicacion": {
+    "provincia": "Granada",
+    "ciudad": "Almuñécar"
+  },
+  "contacto": {
+    "nombre": "Juan Carlos",
+    "telefono": "651236545",
+    "email": "jj@mail.com"
+  },
+  "fecha_publicacion": {
+    "$date": "2025-11-19T00:00:00.000Z"
+  },
+  "__v": 0,
+  "imagen": "/uploads/1765359222062.jpeg"
+},
+{
+  "_id": {
+    "$oid": "691ec463bfea31e7aa028215"
+  },
+  "tipo": "furgoneta",
+  "matricula": "4125ABD",
+  "marca": "Citroen",
+  "modelo": "Berlingo",
+  "anio": 2020,
+  "estado": "disponible",
+  "kilometros": 45000,
+  "precio": 9000,
+  "combustible": "Diésel",
+  "transmision": "manual",
+  "potencia_cv": 95,
+  "descripcion": "Buen estado, blanca e ITV pasado",
+  "ubicacion": {
+    "provincia": "Badajoz",
+    "ciudad": "Badajoz"
+  },
+  "contacto": {
+    "nombre": "Angel Santos",
+    "telefono": "652445844",
+    "email": "algo@algo.com"
+  },
+  "fecha_publicacion": {
+    "$date": "2025-11-20T00:00:00.000Z"
+  },
+  "imagen": "/uploads/1763624035495.jpeg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69394067631d303897afd41b"
+  },
+  "tipo": "coche",
+  "matricula": "6584JPF",
+  "marca": "Skoda",
+  "modelo": "Superb",
+  "anio": 2024,
+  "estado": "disponible",
+  "kilometros": 12000,
+  "precio": 24000,
+  "combustible": "Híbrido",
+  "transmision": "automatica",
+  "potencia_cv": 140,
+  "descripcion": "Prácticamente nuevo. Vehículo de flota.",
+  "ubicacion": {
+    "provincia": "Alicante",
+    "ciudad": "Alcoleja"
+  },
+  "contacto": {
+    "nombre": "Isabel",
+    "telefono": "654123456",
+    "email": "jj@mail.com"
+  },
+  "fecha_publicacion": {
+    "$date": "2025-12-09T00:00:00.000Z"
+  },
+  "imagen": "/uploads/1765359719842.jpg",
+  "__v": 0
+}]
