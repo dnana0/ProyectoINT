@@ -1,0 +1,187 @@
+[{
+  "_id": {
+    "$oid": "698b7f73d95bba43453fc36f"
+  },
+  "productos": [
+    {
+      "productoId": "698b66a41513aed531c0325c",
+      "nombre": "Toyota Corolla",
+      "cantidad": 1,
+      "precio_unitario": 18500,
+      "_id": {
+        "$oid": "698b7f73d95bba43453fc370"
+      }
+    },
+    {
+      "productoId": "698b66a41513aed531c0325d",
+      "nombre": "BMW X3",
+      "cantidad": 1,
+      "precio_unitario": 35900,
+      "_id": {
+        "$oid": "698b7f73d95bba43453fc371"
+      }
+    }
+  ],
+  "total": 54400,
+  "fecha": {
+    "$date": "2026-02-10T18:56:51.767Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698b8009d95bba43453fc373"
+  },
+  "productos": [
+    {
+      "productoId": "698b66a41513aed531c0325c",
+      "nombre": "Toyota Corolla",
+      "cantidad": 1,
+      "precio_unitario": 18500,
+      "_id": {
+        "$oid": "698b8009d95bba43453fc374"
+      }
+    },
+    {
+      "productoId": "698b66a41513aed531c0325d",
+      "nombre": "BMW X3",
+      "cantidad": 1,
+      "precio_unitario": 35900,
+      "_id": {
+        "$oid": "698b8009d95bba43453fc375"
+      }
+    }
+  ],
+  "total": 54400,
+  "fecha": {
+    "$date": "2026-02-10T18:59:21.636Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698e5aba984b9ff7cc021ead"
+  },
+  "productos": [
+    {
+      "productoId": "698e124b2905e87a0dba6faa",
+      "nombre": "Mercedes Papamóvil",
+      "cantidad": 1,
+      "precio_unitario": 150000,
+      "_id": {
+        "$oid": "698e5aba984b9ff7cc021eae"
+      }
+    }
+  ],
+  "total": 150000,
+  "fecha": {
+    "$date": "2026-02-12T22:56:58.814Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698e5cbc984b9ff7cc021eb5"
+  },
+  "productos": [
+    {
+      "productoId": "698b66a41513aed531c0325f",
+      "nombre": "Audi A4",
+      "cantidad": 1,
+      "precio_unitario": 42000,
+      "_id": {
+        "$oid": "698e5cbc984b9ff7cc021eb6"
+      }
+    }
+  ],
+  "total": 42000,
+  "fecha": {
+    "$date": "2026-02-12T23:05:32.560Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698e6404984b9ff7cc021ed7"
+  },
+  "productos": [
+    {
+      "productoId": "698b66a41513aed531c03260",
+      "nombre": "Seat Ibiza",
+      "cantidad": 1,
+      "precio_unitario": 15900,
+      "_id": {
+        "$oid": "698e6404984b9ff7cc021ed8"
+      }
+    }
+  ],
+  "total": 15900,
+  "fecha": {
+    "$date": "2026-02-12T23:36:36.785Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698e6470984b9ff7cc021eda"
+  },
+  "productos": [
+    {
+      "productoId": "698b66a41513aed531c03260",
+      "nombre": "Seat Ibiza",
+      "cantidad": 1,
+      "precio_unitario": 15900,
+      "_id": {
+        "$oid": "698e6470984b9ff7cc021edb"
+      }
+    }
+  ],
+  "total": 16900,
+  "fecha": {
+    "$date": "2026-02-12T23:38:24.458Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698e648c984b9ff7cc021edd"
+  },
+  "productos": [],
+  "total": 0,
+  "fecha": {
+    "$date": "2026-02-12T23:38:52.416Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698e6499984b9ff7cc021edf"
+  },
+  "productos": [],
+  "total": 0,
+  "fecha": {
+    "$date": "2026-02-12T23:39:05.633Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698e650d984b9ff7cc021ee5"
+  },
+  "productos": [
+    {
+      "productoId": "698b66a41513aed531c03260",
+      "nombre": "Seat Ibiza",
+      "cantidad": 1,
+      "precio_unitario": 15900,
+      "_id": {
+        "$oid": "698e650d984b9ff7cc021ee6"
+      }
+    }
+  ],
+  "total": 15310,
+  "fecha": {
+    "$date": "2026-02-12T23:41:01.477Z"
+  },
+  "__v": 0
+}]

@@ -1,7 +1,7 @@
 <template>
   <div id="pagina">
     <!-- Video de fondo -->
-    <div id="contenedor-video">
+    <div id="contenedor-video" class="rounded-1" >
       <video id="bg-video" autoplay muted loop playsinline>
         <source src="../assets/coche.mp4" type="video/mp4" />
         Tu navegador no soporta el video.
@@ -22,7 +22,8 @@
 #pagina {
   position: relative;
   width: 100%;
-  height: 100vh; /* ocupa toda la pantalla */
+  height: calc(100vh - 140px); /* Ajustado para dejar espacio para navbar y footer */
+  margin: 15px 0 5px 0; /* Más espaciado arriba, menos abajo */
   overflow: hidden;
 }
 
@@ -41,6 +42,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover; /* llena sin deformar */
+  object-position: center center; /* Mantiene el centro del video visible */
 }
 
 /* Contenido encima */

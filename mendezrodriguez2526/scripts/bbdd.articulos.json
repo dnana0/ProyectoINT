@@ -1,0 +1,372 @@
+[{
+  "_id": {
+    "$oid": "698b66a41513aed531c0325c"
+  },
+  "tipo": "Turismo",
+  "matricula": "ABC-1234",
+  "marca": "Toyota",
+  "modelo": "Corolla",
+  "anio": 2022,
+  "estado": "reservado",
+  "kilometros": 15000,
+  "precio": 18500,
+  "combustible": "Gasolina",
+  "transmision": "Manual",
+  "potencia_cv": 130,
+  "descripcion": "Vehículo en excelente estado, mantenimiento al día",
+  "ubicacion": {
+    "provincia": "Madrid",
+    "ciudad": "Madrid"
+  },
+  "contacto": {
+    "nombre": "Juan García",
+    "telefono": "612345678",
+    "email": "juan@example.com"
+  },
+  "fecha_publicacion": {
+    "$date": "2026-02-10T17:11:00.464Z"
+  },
+  "__v": 0,
+  "imagen": "/uploads/1770915503583.jpg"
+},
+{
+  "_id": {
+    "$oid": "698b66a41513aed531c0325d"
+  },
+  "tipo": "SUV",
+  "matricula": "DEF-5678",
+  "marca": "BMW",
+  "modelo": "X3",
+  "anio": 2021,
+  "estado": "reservado",
+  "kilometros": 32000,
+  "precio": 35900,
+  "combustible": "Diésel",
+  "transmision": "Automática",
+  "potencia_cv": 190,
+  "descripcion": "SUV deportivo, equipado con todas las tecnologías",
+  "ubicacion": {
+    "provincia": "Barcelona",
+    "ciudad": "Barcelona"
+  },
+  "contacto": {
+    "nombre": "María López",
+    "telefono": "623456789",
+    "email": "maria@example.com"
+  },
+  "fecha_publicacion": {
+    "$date": "2026-02-10T17:11:00.465Z"
+  },
+  "__v": 0,
+  "imagen": "/uploads/1770915525373.jpeg"
+},
+{
+  "_id": {
+    "$oid": "698b66a41513aed531c0325e"
+  },
+  "tipo": "Familiar",
+  "matricula": "GHI-9012",
+  "marca": "Volkswagen",
+  "modelo": "Passat",
+  "anio": 2020,
+  "estado": "disponible",
+  "kilometros": 48000,
+  "precio": 22500,
+  "combustible": "Gasolina",
+  "transmision": "Automática",
+  "potencia_cv": 150,
+  "descripcion": "Cómodo familiar con maletero amplio",
+  "ubicacion": {
+    "provincia": "Valencia",
+    "ciudad": "Valencia"
+  },
+  "contacto": {
+    "nombre": "Pedro Martín",
+    "telefono": "634567890",
+    "email": "pedro@example.com"
+  },
+  "fecha_publicacion": {
+    "$date": "2026-02-10T17:11:00.465Z"
+  },
+  "__v": 0,
+  "imagen": "/uploads/1770915540739.webp"
+},
+{
+  "_id": {
+    "$oid": "698b66a41513aed531c0325f"
+  },
+  "tipo": "Deportivo",
+  "matricula": "JKL-3456",
+  "marca": "Audi",
+  "modelo": "A4",
+  "anio": 2023,
+  "estado": "disponible",
+  "kilometros": 5000,
+  "precio": 42000,
+  "combustible": "Gasolina",
+  "transmision": "Automática",
+  "potencia_cv": 200,
+  "descripcion": "Deportivo moderno, última tecnología",
+  "ubicacion": {
+    "provincia": "Sevilla",
+    "ciudad": "Sevilla"
+  },
+  "contacto": {
+    "nombre": "Ana Rodríguez",
+    "telefono": "645678901",
+    "email": "ana@example.com"
+  },
+  "fecha_publicacion": {
+    "$date": "2026-02-10T17:11:00.465Z"
+  },
+  "__v": 0,
+  "imagen": "/uploads/1770915548186.jpg"
+},
+{
+  "_id": {
+    "$oid": "698b66a41513aed531c03260"
+  },
+  "tipo": "Compacto",
+  "matricula": "MNO-7890",
+  "marca": "Seat",
+  "modelo": "Ibiza",
+  "anio": 2022,
+  "estado": "disponible",
+  "kilometros": 22000,
+  "precio": 15900,
+  "combustible": "Gasolina",
+  "transmision": "Manual",
+  "potencia_cv": 110,
+  "descripcion": "Vehículo ideal para ciudad, económico y ágil",
+  "ubicacion": {
+    "provincia": "Zaragoza",
+    "ciudad": "Zaragoza"
+  },
+  "contacto": {
+    "nombre": "Carlos Sánchez",
+    "telefono": "656789012",
+    "email": "carlos@example.com"
+  },
+  "fecha_publicacion": {
+    "$date": "2026-02-10T17:11:00.465Z"
+  },
+  "__v": 0,
+  "imagen": "/uploads/1770915555566.jpeg"
+},
+{
+  "_id": {
+    "$oid": "698e0fd62905e87a0dba6f9a"
+  },
+  "tipo": "coche",
+  "marca": "Peter",
+  "modelo": "Coptero",
+  "anio": 2010,
+  "kilometros": 200,
+  "precio": 200000,
+  "combustible": "Gasolina",
+  "transmision": "coche",
+  "potencia_cv": 500,
+  "descripcion": "The Petercopter is a helicopter owned by Peter Griffin. The copter itself is simply a light blue helicopter with Peter's face molded onto the front.",
+  "ubicacion": {
+    "ciudad": "Algodre",
+    "provincia": "Zamora"
+  },
+  "contacto": {
+    "nombre": "Peter Griffin",
+    "telefono": "644544544",
+    "email": "pertergriffin@gmail.com"
+  },
+  "fecha_publicacion": {
+    "$date": "2026-02-12T00:00:00.000Z"
+  },
+  "estado": "disponible",
+  "matricula": "1234B",
+  "imagen": "/uploads/1770917846817.webp",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698e10fb2905e87a0dba6fa1"
+  },
+  "tipo": "furgoneta",
+  "marca": "Optimus",
+  "modelo": "Prime",
+  "anio": 1920,
+  "kilometros": 2000,
+  "precio": 500000,
+  "combustible": "Diésel",
+  "transmision": "coche",
+  "potencia_cv": 800,
+  "descripcion": "Optimus Prime es un personaje ficticio y protagonista principal de la franquicia Transformers. Generalmente representado como un líder valiente y noble, Optimus Prime es el comandante supremo de los Autobots en su lucha contra los Decepticons.",
+  "ubicacion": {
+    "ciudad": "Bisbal d'Empordà, La",
+    "provincia": "Girona"
+  },
+  "contacto": {
+    "nombre": "Megatron",
+    "telefono": "676767676",
+    "email": "megatron@gmail.com"
+  },
+  "fecha_publicacion": {
+    "$date": "2026-02-12T00:00:00.000Z"
+  },
+  "estado": "disponible",
+  "matricula": "3451KJD",
+  "imagen": "/uploads/1770918279661.jpeg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698e124b2905e87a0dba6faa"
+  },
+  "tipo": "furgoneta",
+  "marca": "Mercedes",
+  "modelo": "Papamóvil",
+  "anio": 2010,
+  "kilometros": 220,
+  "precio": 150000,
+  "combustible": "Gasolina",
+  "transmision": "coche",
+  "potencia_cv": 200,
+  "descripcion": "El papamóvil es el vehículo oficial, generalmente blanco, blindado y con cúpula transparente, utilizado por el papa para desplazarse entre la multitud durante sus visitas, facilitando visibilidad y seguridad. Evolucionó desde coches donados en los años 30 a vehículos adaptados, con modelos modernos totalmente eléctricos y blindados, como el Mercedes-Benz Clase G580. ",
+  "ubicacion": {
+    "ciudad": "Baños de Ebro/Mañueta",
+    "provincia": "Álava"
+  },
+  "contacto": {
+    "nombre": "El Papa",
+    "telefono": "666666666",
+    "email": "papa@gmail.com"
+  },
+  "fecha_publicacion": {
+    "$date": "2026-02-12T00:00:00.000Z"
+  },
+  "estado": "disponible",
+  "matricula": "ABC-1234",
+  "imagen": "/uploads/1770918475649.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698e4791310b68bae250e6e8"
+  },
+  "tipo": "coche",
+  "marca": "Toyota",
+  "modelo": "Yaris",
+  "anio": 2010,
+  "kilometros": 85000,
+  "precio": 33900,
+  "combustible": "Diésel",
+  "transmision": "automatica",
+  "potencia_cv": 200,
+  "descripcion": "Vehículo Toyota Yaris",
+  "ubicacion": {
+    "ciudad": "Aramaio",
+    "provincia": "Álava"
+  },
+  "contacto": {
+    "nombre": "Juan García",
+    "telefono": "678853853",
+    "email": "contacto@gmail.com"
+  },
+  "fecha_publicacion": {
+    "$date": "2026-02-12T00:00:00.000Z"
+  },
+  "estado": "disponible",
+  "matricula": "5454JDF",
+  "imagen": "/uploads/1770932113304.webp",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698e47f2310b68bae250e6eb"
+  },
+  "tipo": "coche",
+  "marca": "Toyota",
+  "modelo": "Sedan",
+  "anio": 20014,
+  "kilometros": 97000,
+  "precio": 23000,
+  "combustible": "Híbrido",
+  "transmision": "automatica",
+  "potencia_cv": 150,
+  "descripcion": "Vehículo Toyota Sedan",
+  "ubicacion": {
+    "ciudad": "Banyalbufar",
+    "provincia": "Balears, Illes"
+  },
+  "contacto": {
+    "nombre": "Juan García",
+    "telefono": "633895243",
+    "email": "contacto@gmail.com"
+  },
+  "fecha_publicacion": {
+    "$date": "2026-02-12T00:00:00.000Z"
+  },
+  "estado": "disponible",
+  "matricula": "ABC-1234",
+  "imagen": "/uploads/1770932210659.jfif",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698e484a310b68bae250e6ee"
+  },
+  "tipo": "furgoneta",
+  "marca": "Toyota",
+  "modelo": "Proace",
+  "anio": 2018,
+  "kilometros": 56000,
+  "precio": 36900,
+  "combustible": "Gasolina",
+  "transmision": "coche",
+  "potencia_cv": 300,
+  "descripcion": "Furgoneta Toyota Proace",
+  "ubicacion": {
+    "ciudad": "Cervera de los Montes",
+    "provincia": "Toledo"
+  },
+  "contacto": {
+    "nombre": "Juan García",
+    "telefono": "633895243",
+    "email": "contacto@gmail.com"
+  },
+  "fecha_publicacion": {
+    "$date": "2026-02-12T00:00:00.000Z"
+  },
+  "estado": "disponible",
+  "matricula": "3323KJD",
+  "imagen": "/uploads/1770932298326.jfif",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698e48b4310b68bae250e6f3"
+  },
+  "tipo": "coche",
+  "marca": "Seat",
+  "modelo": "Arona",
+  "anio": 2021,
+  "kilometros": 33000,
+  "precio": 29900,
+  "combustible": "Híbrido",
+  "transmision": "automatica",
+  "potencia_cv": 180,
+  "descripcion": "Vehículo Seat Arona",
+  "ubicacion": {
+    "ciudad": "Arenas de San Pedro",
+    "provincia": "Ávila"
+  },
+  "contacto": {
+    "nombre": "Juan García",
+    "telefono": "633895243",
+    "email": "contacto@gmail.com"
+  },
+  "fecha_publicacion": {
+    "$date": "2026-02-12T00:00:00.000Z"
+  },
+  "estado": "disponible",
+  "matricula": "5467BAX",
+  "imagen": "/uploads/1770932404862.webp",
+  "__v": 0
+}]
