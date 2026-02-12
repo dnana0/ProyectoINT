@@ -10,6 +10,7 @@ import dotenv from "dotenv";
 import authRouter from "./authRouter.js"
 import articulosRoutes from "./articulosRoutes.js"; // ruta al router backend
 import contactoRoutes from "./contactoRoutes.js"
+import solicitudesEmpleoRoutes from "./solicitudesEmpleoRoutes.js"
 import Stripe from "stripe";
 import facturaRoutes from "./facturaRoutes.js";
 
@@ -59,6 +60,9 @@ app.use("/api/facturas", facturaRoutes);
 // Rutas de contacto
 app.use("/api/contacto", contactoRoutes);
 
+// Rutas de solicitudes de empleo
+app.use("/api/solicitudes-empleo", solicitudesEmpleoRoutes);
+
 
 // Configuración de CORS modificado para correo
 
@@ -76,18 +80,32 @@ app.use(cors(corsOptions));
 // ruta crear sescion checkout
 app.post("/crear-checkout-session", async (req, res) => {
   try {
-    const { items } = req.body;
+    const { items, amount } = req.body;
 
-  const lineItems = items.map(item => ({
-    price_data: {
-      currency: 'eur',
-      product_data: {
-        name: item.nombre,
-      },
-    unit_amount: Math.round(item.precio * 100), // convertir a centimos
-  },
-    quantity: item.cantidad,
-  }));
+  const totalAmount = Number(amount);
+  const lineItems = Number.isFinite(totalAmount) && totalAmount > 0
+    ? [
+        {
+          price_data: {
+            currency: 'eur',
+            product_data: {
+              name: 'Total carrito',
+            },
+            unit_amount: Math.round(totalAmount * 100),
+          },
+          quantity: 1,
+        }
+      ]
+    : items.map(item => ({
+        price_data: {
+          currency: 'eur',
+          product_data: {
+            name: item.nombre,
+          },
+          unit_amount: Math.round(item.precio * 100), // convertir a centimos
+        },
+        quantity: item.cantidad,
+      }));
 
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],

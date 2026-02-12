@@ -36,13 +36,30 @@
 
     <div>
         <label for="descuento">Introduce tu codigo de descuento</label>
-        <input type="text" id="descuento" name="descuento" class="form-control w-25 d-inline-block ms-2" placeholder="Codigo de descuento" v-model="codigoDescuento" @change="calcularPrecioFinal">
+        <input type="text" id="descuento" name="descuento" class="form-control w-25 d-inline-block ms-2" placeholder="Codigo de descuento" v-model="codigoDescuento" @input="calcularPrecioFinal">
     </div>
 
-    <div class="d-flex justify-content-between align-items-center at-3">
-        <h5>
-            Total: {{ precioFinal.toFixed(2) }}€
-</h5>
+    <div class="mt-3">
+        <div class="d-flex justify-content-between">
+            <span>Subtotal:</span>
+            <span><strong>{{ subtotal.toFixed(2) }}€</strong></span>
+        </div>
+        <div v-if="gastosEnvio > 0" class="d-flex justify-content-between text-warning">
+            <span><i class="bi bi-truck me-1"></i>Gastos de envío:</span>
+            <span><strong>{{ gastosEnvio.toFixed(2) }}€</strong></span>
+        </div>
+        <div v-else class="d-flex justify-content-between text-success">
+            <span><i class="bi bi-check-circle-fill me-1"></i>Gastos de envío:</span>
+            <span><strong>¡GRATIS!</strong></span>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">Total:</h5>
+            <h5 class="mb-0"><strong>{{ precioFinal.toFixed(2) }}€</strong></h5>
+        </div>
+    </div>
+
+    <div class="text-end mt-3">
         <button class="btn btn-success" @click="iniciarPago">Iniciar Pago</button>
     </div>
     <!-- <div class="text-end mt-3">
@@ -81,6 +98,8 @@ const removeProducto = (id) => {
 }
 const codigoDescuento = ref('')
 const precioFinal = ref(0)
+const subtotal = ref(0)
+const gastosEnvio = ref(0)
 const isUsuario = ref(
     sessionStorage.getItem('isUsuario') === 'true'
 )
@@ -89,15 +108,26 @@ const isAdmin = ref(
 )
 
 const calcularPrecioFinal = () => {
+    // Calcular subtotal con descuento si aplica
     if (codigoDescuento.value === "DESCUENTO") {
-        precioFinal.value = cesta.totalPrecio * 0.9
+        subtotal.value = cesta.totalPrecio * 0.9
     } else {
-        precioFinal.value = cesta.totalPrecio
+        subtotal.value = cesta.totalPrecio
     }
 
-    if (precioFinal.value < 50) {
-        precioFinal.value = precioFinal.value * 1.05
+    if (subtotal.value < 50) {
+        subtotal.value = subtotal.value * 1.05
     }
+
+    // Calcular gastos de envío: 1000€ si el subtotal es menor a 30000€
+    if (subtotal.value < 30000 && subtotal.value > 0) {
+        gastosEnvio.value = 1000
+    } else {
+        gastosEnvio.value = 0
+    }
+
+    // Precio final = subtotal + gastos de envío
+    precioFinal.value = subtotal.value + gastosEnvio.value
 }
 
 calcularPrecioFinal()
@@ -138,11 +168,14 @@ const iniciarPago = async () => {
     try {
     // IMPORTANTE: Guardar el carrito en localStorage ANTES de hacer cualquier redireccionamiento
     localStorage.setItem('cesta', JSON.stringify(cesta.items))
+    // Guardar el código de descuento también
+    localStorage.setItem('codigoDescuento', codigoDescuento.value)
     
     // Crear la sesión de pago en el backend
+    calcularPrecioFinal()
     const response = await axios.post('http://localhost:5000/crear-checkout-session', {
         items: cesta.items,
-        amount: cesta.totalPrecio
+        amount: precioFinal.value
     })
 
     const session = response.data

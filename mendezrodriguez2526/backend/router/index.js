@@ -14,6 +14,9 @@ import BusCar from "../../frontend/components/BusCar.vue";
 import CesTa from "../../frontend/components/CesTa.vue";
 import PaymentSuccess from "../../frontend/components/PaymentSuccess.vue";
 import PaymentCancel from "../../frontend/components/PaymentCancel.vue";
+import Empleo from "../../frontend/components/Empleo.vue";
+import Solicitudes from "../../frontend/components/Solicitudes.vue";
+import { esAdmin } from "../../frontend/api/authApi.js";
 
 
 const routes = [
@@ -91,6 +94,17 @@ const routes = [
         path: '/PaymentCancel',
         name: 'PaymentCancel',
         component: PaymentCancel
+    },
+    {
+        path: '/empleo',
+        name: 'Empleo',
+        component: Empleo
+    },
+    {
+        path: '/solicitudes',
+        name: 'Solicitudes',
+        component: Solicitudes,
+        meta: { requiresAdmin: true }
     }
     
     

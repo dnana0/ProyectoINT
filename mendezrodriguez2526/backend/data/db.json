@@ -10,7 +10,7 @@
       "direccion": "Sistema",
       "provincia": "Madrid",
       "municipio": "Madrid",
-      "historico": true,
+      "historico": false,
       "lopd": true,
       "password": "$2b$10$g4y8Cuyp/ZdzPyX5psh7suRww9LH11GebMu6BUKvGLh8mJLahq0nW",
       "tipo": "admin",
@@ -239,7 +239,7 @@
       "municipio": "Ademuz",
       "historico": true,
       "lopd": true,
-      "password": "",
+      "password": "$2a$10$0aQi24Fz2QIlLO4FjbyIUe0ZODhnr7imTb5XTdJFnUuQvynhdM5IS",
       "id": "ba17"
     },
     {
@@ -542,7 +542,7 @@
       "lopd": true,
       "tipoCliente": "admin",
       "tipo": "admin",
-      "password": "$2b$10$spop8iZYCAyFSZiY0XqfFO1je.L7k8k6C.qHywRps927myZGhhM4y"
+      "password": "$2a$10$WK36KINAf.uagma972KHGOhObkYZK4QxwoKCWfjqJs2iy1Oq9jfEC"
     },
     {
       "dni": "32725018C",

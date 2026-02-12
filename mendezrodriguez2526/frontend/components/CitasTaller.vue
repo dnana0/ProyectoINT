@@ -1,150 +1,207 @@
 <template>
-    <div class="container-fluid my-1 p-3 border rounded-3 shadow-sm bg-light">
-        <!-- Título principal -->
-        <h3 class="text-center mt-2 mb-3 d-flex align-items-center justify-content-center" style="color: #7AB2B2;">
-            <i class="bi bi-person-gear me-2"></i>Lista de Citas
-        </h3>
-
-        <!-- Botón para limpiar formulario -->
-        
-        <div class="d-flex justify-content-end">
-            <button type="button"
-                class="btn border border-primary border-2 rounded-0 text-primary shadow-none mt-2 me-2"
-                style="--bs-btn-hover-bg: var(--bs-primary-bg-subtle)" @click="limpiarPagina"
-                title="Limpiar formulario">
-                <i class="bi bi-arrow-counterclockwise"></i>
+    <div class="container-fluid my-1 p-4 border rounded-3 shadow-sm bg-light">
+        <!-- Encabezado con título y botón -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3 class="mb-0 d-flex align-items-center" style="color: #7AB2B2;">
+                <i class="bi bi-person-gear fs-3 me-2"></i>
+                Gestión de Citas del Taller
+            </h3>
+            <button 
+                type="button"
+                class="btn btn-outline-primary"
+                @click="limpiarPagina"
+                title="Limpiar formulario"
+            >
+                <i class="bi bi-arrow-counterclockwise me-2"></i>Limpiar
             </button>
         </div>
 
         <!-- Formulario para añadir o modificar citas -->
         <form @submit.prevent="guardarCita" class="mb-4">
-            <div class="row g-3 align-items-end mb-3 d-flex justify-content-between me-5 ms-5">
-                <!-- Campo de matricula -->
-                <div class="col-md-3">
-                    <label for="matricula" class="form-label">Matricula</label>
-                    <input type="text"
+            <!-- Primera fila: Matrícula, Móvil, Fecha -->
+            <div class="row g-3 mb-3">
+                <div class="col-md-4">
+                    <label for="matricula" class="form-label">Matrícula:</label>
+                    <input 
+                        type="text"
                         class="form-control"
                         id="matricula"
+                        placeholder="Ej: 1234ABC"
                         pattern="[0-9]{4}[A-Za-z]{3}"
                         v-model="nuevaCita.matricula" 
-                        required />
+                        required 
+                    />
+                    <small class="text-muted">Formato: 4 números + 3 letras</small>
                 </div>
 
-                <!-- Campo de movil -->
-                <div class="col-md-3 me-5">
-                    <label for="movil" class="form-label">Movil</label>
-                    <input type="text" 
-                    class="form-control" 
-                    id="movil" 
-                    pattern="[0-9]{9}"
-                    v-model="nuevaCita.movil" 
-                    required>
-                    </input>
+                <div class="col-md-4">
+                    <label for="movil" class="form-label">Móvil:</label>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        id="movil"
+                        placeholder="Ej: 612345678"
+                        pattern="[0-9]{9}"
+                        v-model="nuevaCita.movil" 
+                        required
+                    />
+                    <small class="text-muted">9 dígitos</small>
                 </div>
 
-                <!-- Campo de fecha de entrada -->
-                <div class="col-md-2 me-5">
-                    <label for="fechaCita" class="form-label">Fecha Cita</label>
-                    <input type="date" 
-                    class="form-control w-auto" 
-                    id="fechaCita"
-                    v-model="nuevaCita.fechaCita"
-                    required />
+                <div class="col-md-4">
+                    <label for="fechaCita" class="form-label">Fecha Cita:</label>
+                    <input 
+                        type="date" 
+                        class="form-control" 
+                        id="fechaCita"
+                        v-model="nuevaCita.fechaCita"
+                        required 
+                    />
                 </div>
             </div>
-            <div class="row g-3 align-items-end d-flex justify-content-between ms-5 me-4">
-                <!-- Campo de genero-->
+
+            <!-- Segunda fila: Estado, Concesionario, Acepta -->
+            <div class="row g-3 mb-3 align-items-center">
                 <div class="col-md-3">
-                    <label>Estado cita:</label>
-                    <div class="col-md-3  d-flex gap-4">
-                        <div>
-                            <label for="estadoCita">Pendiente
-                                <input type="radio" v-model="nuevaCita.estadoCita" class="form-input"
-                                    value="Pendiente" required/></label>
+                    <label class="form-label d-block">Estado de la cita:</label>
+                    <div class="d-flex gap-3 mt-2">
+                        <div class="form-check">
+                            <input 
+                                type="radio" 
+                                class="form-check-input" 
+                                id="estadoPendiente"
+                                v-model="nuevaCita.estadoCita" 
+                                value="Pendiente" 
+                                required
+                            />
+                            <label class="form-check-label" for="estadoPendiente">
+                                Pendiente
+                            </label>
                         </div>
-                        <div>
-                            <label for="estadoCita">Finalizado
-                                <input type="radio" v-model="nuevaCita.estadoCita" class="form-input"
-                                    value="Finalizado" required/></label>
+                        <div class="form-check">
+                            <input 
+                                type="radio" 
+                                class="form-check-input" 
+                                id="estadoFinalizado"
+                                v-model="nuevaCita.estadoCita" 
+                                value="Finalizado" 
+                                required
+                            />
+                            <label class="form-check-label" for="estadoFinalizado">
+                                Finalizado
+                            </label>
                         </div>
                     </div>
                 </div>
-            <!-- Servicio que necesita-->
-                <div class="col-md-3 ms-5 ">
-                    <label for="servicioTaller" class="form-label ms-2
-                    ">Concesionario </label>
-                    <select id="servicioTaller"
-                     v-model="nuevaCita.servicioTaller" 
-                     class="form-select ms-2"
-                     required>
+
+                <div class="col-md-5">
+                    <label for="servicioTaller" class="form-label">Concesionario:</label>
+                    <select 
+                        id="servicioTaller"
+                        v-model="nuevaCita.servicioTaller" 
+                        class="form-select"
+                        required
+                    >
                         <option disabled value="">Selecciona un servicio</option>
-                        <option v-for="servicio in listaServicios" :key="servicio"
-                            :value="servicio">
+                        <option v-for="servicio in listaServicios" :key="servicio" :value="servicio">
                             {{ servicio }}
                         </option>
                     </select>
                 </div>
-                <!-- Acepta -->
-                <div class="col-md-3 ms-5 me-3 form-check">
-                    <label for="acepta" class="form-label ms-5">Acepta:</label>
-                    <div class="col-md-3 ms-5" >
-                        <input type="checkbox" 
-                        class="form-check-input align-center ms-0" 
-                        id="acepta"
-                        v-model="nuevaCita.acepta" />
+
+                <div class="col-md-4">
+                    <label class="form-label d-block">Confirmar datos:</label>
+                    <div class="form-check mt-2">
+                        <input 
+                            type="checkbox" 
+                            class="form-check-input" 
+                            id="acepta"
+                            v-model="nuevaCita.acepta"
+                            required
+                        />
+                        <label class="form-check-label" for="acepta">
+                            Acepto los términos y condiciones
+                        </label>
                     </div>
-        </div>
-                <!-- Botón de acción: Añadir o Modificar -->
-                <div class="flex-grow-1 d-flex justify-content-center">
-                    <button type="submit" class="btn btn-primary border-0 mt-3"
-                    style="background-color: #088395;">
-                        {{ editando ? "Modificar" : "Añadir" }}
-                    </button>
                 </div>
+            </div>
+
+            <!-- Botón centrado -->
+            <div class="d-flex justify-content-center mt-4">
+                <button 
+                    type="submit" 
+                    class="btn btn-primary px-5"
+                    style="background-color: #088395; border-color: #088395;"
+                    :disabled="!nuevaCita.acepta"
+                >
+                    <i class="bi me-2" :class="editando ? 'bi-pencil-square' : 'bi-plus-circle'"></i>
+                    {{ editando ? "Modificar Cita" : "Añadir Cita" }}
+                </button>
             </div>
         </form>
 
-        <!-- Tabla que muestra la lista de citas cargados -->
-        <table class="table table-bordered table-striped table-hover table-sm align-middle table-responsive">
-            <thead class="thead-dark table-primary text-center">
-                <tr>
-                    <th>id</th>
-                    <th>Fecha Cita</th>
-                    <th>Matrícula</th>
-                    <th>Movil</th>
-                    <th>Servicio</th>
-                    <th>Estado</th>  
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="text-center" v-for="cita in citas" :key="cita.id">
-                    <td>{{ cita.id }}</td>
-                    <td>{{ formatearFecha(cita.fechaCita) }}</td>
-                    <td>{{ cita.matricula }}</td>
-                    <td>{{ cita.movil}}</td>
-                    <td>{{ cita.servicioTaller}}</td>
-                    <td>{{ cita.estadoCita}}</td>
-                    <td class="align-middle text-center">
-                        <!-- Botón para eliminar una cita -->
-                        <button class="btn btn-danger btn-sm border-0 ms-2 me-2 shadow-none rounded-1"
-                            style="background-color: #088395"
-                            @click="borrarCita(cita.id)">
-                            <i class="bi bi-trash"></i>
-                        </button>
-                        
-                        
+        <!-- Separador visual -->
+        <hr class="my-4" style="border-top: 2px solid #7AB2B2; opacity: 0.5;">
 
-                        <!-- Botón para editar una cita -->
-                        <button class="btn btn-warning btn-sm shadow-none border-0 rounded-1"
-                            style="background-color: #7AB2B2;"
-                            @click="editarCita(cita.id)">
-                            <i class="bi bi-pencil"></i>
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <!-- Tabla que muestra la lista de citas cargados -->
+        <div class="mt-4">
+            <h5 class="mb-3 text-center" style="color: #7AB2B2;">
+                <i class="bi bi-list-ul me-2"></i>Listado de Citas
+            </h5>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped table-hover align-middle">
+                    <thead class="table-primary text-center">
+                        <tr>
+                            <th>ID</th>
+                            <th>Fecha Cita</th>
+                            <th>Matrícula</th>
+                            <th>Móvil</th>
+                            <th>Servicio</th>
+                            <th>Estado</th>  
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-center" v-for="cita in citas" :key="cita.id">
+                            <td>{{ cita.id }}</td>
+                            <td>{{ formatearFecha(cita.fechaCita) }}</td>
+                            <td>{{ cita.matricula }}</td>
+                            <td>{{ cita.movil }}</td>
+                            <td>{{ cita.servicioTaller }}</td>
+                            <td>
+                                <span 
+                                    class="badge"
+                                    :class="cita.estadoCita === 'Pendiente' ? 'bg-warning text-dark' : 'bg-success'"
+                                >
+                                    {{ cita.estadoCita }}
+                                </span>
+                            </td>
+                            <td class="align-middle text-center">
+                                <!-- Botón para editar una cita -->
+                                <button 
+                                    class="btn btn-sm btn-warning me-2"
+                                    style="background-color: #7AB2B2; border-color: #7AB2B2;"
+                                    @click="editarCita(cita.id)"
+                                    title="Editar cita"
+                                >
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+                                
+                                <!-- Botón para eliminar una cita -->
+                                <button 
+                                    class="btn btn-sm btn-danger"
+                                    style="background-color: #088395; border-color: #088395;"
+                                    @click="borrarCita(cita.id)"
+                                    title="Eliminar cita"
+                                >
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </template>
 <script setup>
@@ -360,5 +417,56 @@ function formatearFecha(fechaISO) {
 .table-primary th {
   background-color: #ebf4f6 !important;
   color: #09637e !important;
+  font-weight: 600;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #09637e;
+  margin-bottom: 0.5rem;
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  border-color: #088395;
+  box-shadow: 0 0 0 0.25rem rgba(8, 131, 149, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: #088395;
+  border-color: #088395;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.badge {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+small.text-muted {
+  font-size: 0.8rem;
+  color: #6c757d !important;
+}
+
+.btn-outline-primary {
+  color: #088395;
+  border-color: #088395;
+}
+
+.btn-outline-primary:hover {
+  background-color: #088395;
+  border-color: #088395;
+  color: white;
+}
+
+.table-responsive {
+  border-radius: 0.375rem;
+  overflow: hidden;
 }
 </style>

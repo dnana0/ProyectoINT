@@ -50,13 +50,18 @@
           <li class="nav-item">
             <router-link class="nav-link" to="/ventas">Ventas</router-link>
           </li>
+          <li class="nav-item" v-if="!isAdmin">
+            <router-link class="nav-link" to="/empleo">Empleo</router-link>
+          </li>
+          <li class="nav-item" v-if="isAdmin">
+            <router-link class="nav-link" to="/solicitudes">Solicitudes</router-link>
+          </li>
         </ul>
         <!-- BUSCADOR alineado a la derecha -->
         <form
           class="d-flex ms-auto me-2"
           role="search"
           @submit.prevent="buscar"
-          v-if="isAdmin"
         >
           <input
             class="form-control form-control-sm me-2 rounded-1"

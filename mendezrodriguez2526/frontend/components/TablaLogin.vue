@@ -48,6 +48,39 @@
       </form>
     </div>
   </div>
+
+  <!-- Recuadro de credenciales de prueba -->
+  <div class="credenciales-prueba">
+    <div class="credenciales-header">
+      <i class="bi bi-info-circle-fill me-2"></i>
+      <strong>Credenciales de Prueba</strong>
+    </div>
+    <div class="credenciales-body">
+      <div class="credencial-item mb-2">
+        <div class="credencial-tipo">
+          <i class="bi bi-person-badge-fill"></i> Administrador
+        </div>
+        <div class="credencial-datos">
+          <span class="text-muted small">DNI:</span> <strong>12345678A</strong>
+        </div>
+        <div class="credencial-datos">
+          <span class="text-muted small">Pass:</span> <strong>admin123</strong>
+        </div>
+      </div>
+      <hr class="my-2">
+      <div class="credencial-item">
+        <div class="credencial-tipo">
+          <i class="bi bi-person-fill"></i> Usuario Normal
+        </div>
+        <div class="credencial-datos">
+          <span class="text-muted small">DNI:</span> <strong>Y1234567X</strong>
+        </div>
+        <div class="credencial-datos">
+          <span class="text-muted small">Pass:</span> <strong>abc123</strong>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -131,9 +164,69 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 .form-label {
   background-color: transparent !important;
   margin-bottom: 0.5rem;
+}
+
+.credenciales-prueba {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #ffffff;
+  border: 2px solid #09637e;
+  border-radius: 10px;
+  padding: 0;
+  width: 280px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.credenciales-header {
+  background: linear-gradient(135deg, #09637e 0%, #088395 100%);
+  color: white;
+  padding: 12px 15px;
+  border-radius: 8px 8px 0 0;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+}
+
+.credenciales-body {
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 0 0 8px 8px;
+}
+
+.credencial-item {
+  background-color: white;
+  padding: 10px;
+  border-radius: 6px;
+  border-left: 4px solid #7ab2b2;
+}
+
+.credencial-tipo {
+  color: #09637e;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.credencial-datos {
+  font-size: 0.85rem;
+  margin-left: 10px;
+  margin-bottom: 3px;
+}
+
+.credencial-datos strong {
+  color: #088395;
+  user-select: all;
+  cursor: text;
+}
+
+.credenciales-prueba hr {
+  border-top: 1px solid #dee2e6;
+  margin: 10px 0;
 }
 </style>

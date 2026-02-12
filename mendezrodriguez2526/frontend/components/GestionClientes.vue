@@ -323,7 +323,21 @@
     <!-- Lista de Clientes -->
     <div class="table-responsive" v-if="isAdmin">
       <h4 class="text-center w-100">Listado Clientes</h4>
-      <table class="table table-bordered table-striped w-100 aling-middle">
+      <div class="d-flex justify-content-center gap-2 mb-3">
+        <button 
+          @click="ordenarPorApellidos" 
+          class="btn btn-outline-secondary btn-sm"
+          title="Ordenar por Apellidos">
+          <i class="bi bi-sort-alpha-down me-1"></i>Ordenar por Apellidos
+        </button>
+        <button 
+          @click="ordenarPorNombre" 
+          class="btn btn-outline-secondary btn-sm"
+          title="Ordenar por Nombre">
+          <i class="bi bi-sort-alpha-up me-1"></i>Ordenar por Nombre
+        </button>
+      </div>
+      <table class="table table-bordered table-striped w-100 align-middle">
         <thead class="table-primary">
           <tr>
             <th class="text-center">ID</th>
@@ -1037,6 +1051,22 @@ const limpiarCampos = () => {
     password: "",
     password2: "",
   };
+};
+
+// Función para ordenar por Apellidos
+const ordenarPorApellidos = () => {
+  clientes.value = [...clientes.value].sort((a, b) => 
+    a.apellidos.localeCompare(b.apellidos, 'es', { sensitivity: 'base' })
+  );
+  currentPage.value = 1; // Reset a primera página
+};
+
+// Función para ordenar por Nombre
+const ordenarPorNombre = () => {
+  clientes.value = [...clientes.value].sort((a, b) => 
+    a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' })
+  );
+  currentPage.value = 1; // Reset a primera página
 };
 
 // Añadimos limpieza de passwords si se usa sin reescribir todo

@@ -341,21 +341,50 @@
             {{ editando ? "Modificar" : "Guardar" }}
           </button>
         </div>
-        <div>
-          <button
-            @click="imprimirPDF"
-            class="btn btn-secondary rounded border shadow-none px-4"
-            type="submit"
-          >
-            <i class="bi bi-printer"></i>Imprimir
-          </button>
-        </div>
       </div>
     </form>
     <div class="table-responsive">
-      <h4 class="text-center mb-1" style="color: #7ab2b2">
+      <h4 class="text-center mb-3" style="color: #7ab2b2">
         Listado de Modelos
       </h4>
+      
+      <!-- Botones de impresión -->
+      <div class="d-flex justify-content-between align-items-center mb-3 gap-3">
+        <!-- Imprimir por marca (izquierda) -->
+        <div class="d-flex align-items-center gap-2" style="flex: 1; max-width: 400px;">
+
+          <button
+            class="btn btn-secondary rounded shadow-sm px-3 border-2"
+            type="button"
+            @click="imprimirPorMarca"
+            style="white-space: nowrap; background-color: #7ab2b2; border-color: #7ab2b2 ;"
+            
+          >
+            <i class="bi bi-printer me-2"></i>Marca
+          </button>
+
+          <input
+            type="text"
+            id="marcaFiltro"
+            v-model="filtroMarca"
+            @blur="capitalizarFiltroMarca"
+            class="form-control rounded shadow-none border-2"
+            placeholder="Indica la marca a imprimir"
+            style="flex: 1; border-color: #7ab2b2;"
+          />
+        </div>
+
+        <!-- Imprimir Todo (derecha) -->
+        <button
+          @click="imprimirTodos"
+          class="btn btn-secondary rounded shadow-sm px-3 border-2"
+          type="button"
+          style="background-color: #7ab2b2; border-color: #7ab2b2;  "
+        >
+          <i class="bi bi-printer me-2"></i>Imprimir Todo
+        </button>
+      </div>
+
       <table
         class="table table-bordered table-striped table-sm table-hover table-sm align-middle"
       >
@@ -732,12 +761,202 @@ const guardarVehiculo = async () => {
 
 const archivo = ref(null);
 
+const filtroMarca = ref("");
+
 const onFileChange = (event) => {
   const file = event.target.files[0];
   if (file) {
     archivo.value = file;
   }
 };
+
+const capitalizarFiltroMarca = () => {
+  const texto = filtroMarca.value ?? "";
+  if (texto.trim() === "") return;
+  filtroMarca.value = texto
+    .toLowerCase()
+    .split(" ")
+    .map((palabra) => {
+      if (!palabra) return "";
+      return palabra.charAt(0).toUpperCase() + palabra.slice(1);
+    })
+    .join(" ");
+};
+
+const imprimirPorMarca = () => {
+  imprimirPDF(filtroMarca.value || undefined);
+};
+
+const imprimirTodos = () => {
+  imprimirPDF(null);
+};
+
+const imprimirPDF = (marca) => {
+  const doc = new jsPDF();
+
+  const now = new Date();
+  const fecha = now.toISOString().split("T")[0];
+  const pad = (n) => String(n).padStart(2, "0");
+  const hora = `${pad(now.getHours())}-${pad(now.getMinutes())}-${pad(now.getSeconds())}`;
+
+  // Page/margins setup
+  const pageWidth = doc.internal.pageSize.getWidth();
+  const leftMargin = 15;
+  const rightMargin = 15;
+  const usableWidth = pageWidth - leftMargin - rightMargin;
+
+  // Columns widths (will be scaled to usableWidth if needed)
+  const colWidths = [30, 35, 45, 25, 30, 25]; // Matrícula, Marca, Modelo, Estado, Combustible, Precio
+  const cols = [
+    "Matrícula",
+    "Marca",
+    "Modelo",
+    "Estado",
+    "Combustible",
+    "Precio",
+  ];
+
+  const sumWidths = colWidths.reduce((a, b) => a + b, 0);
+  if (Math.abs(sumWidths - usableWidth) > 0.1) {
+    const scale = usableWidth / sumWidths;
+    for (let i = 0; i < colWidths.length; i++) colWidths[i] *= scale;
+  }
+
+  // Layout
+  const titleY = 20;
+  const headerYStart = 32;
+  const rowHeight = 8;
+  const footerLimitY = 280;
+  const cellPadding = 2;
+
+  const rgbFromHex = (hex) => {
+    const h = hex.replace("#", "");
+    return [parseInt(h.substring(0, 2), 16), parseInt(h.substring(2, 4), 16), parseInt(h.substring(4, 6), 16)];
+  };
+  const headerBg = "#09637e";
+  const headerRgb = rgbFromHex(headerBg);
+
+  const truncateToWidth = (text, maxWidth, fontSize, fontStyle = "normal") => {
+    doc.setFont(undefined, fontStyle);
+    doc.setFontSize(fontSize);
+    if (doc.getTextWidth(text) <= maxWidth) return text;
+    const ell = "...";
+    let low = 0;
+    let high = text.length;
+    while (low < high) {
+      const mid = Math.ceil((low + high) / 2);
+      const candidate = text.slice(0, mid) + ell;
+      if (doc.getTextWidth(candidate) <= maxWidth) {
+        low = mid;
+      } else {
+        high = mid - 1;
+      }
+    }
+    return text.slice(0, low) + ell;
+  };
+
+  const drawHeader = (y) => {
+    let x = leftMargin;
+    doc.setFillColor(headerRgb[0], headerRgb[1], headerRgb[2]);
+    for (let i = 0; i < cols.length; i++) {
+      const w = colWidths[i];
+      doc.rect(x, y, w, rowHeight, "FD");
+      x += w;
+    }
+    x = leftMargin;
+    doc.setTextColor(255, 255, 255);
+    doc.setFont(undefined, "bold");
+    doc.setFontSize(10);
+    for (let i = 0; i < cols.length; i++) {
+      const w = colWidths[i];
+      const available = w - cellPadding * 2;
+      const txt = truncateToWidth(cols[i], available, 10, "bold");
+      const textX = x + cellPadding;
+      const textY = y + rowHeight / 2 + 10 / 2.8;
+      doc.text(txt, textX, textY);
+      x += w;
+    }
+    doc.setTextColor(0, 0, 0);
+    doc.setFont(undefined, "normal");
+  };
+
+  // Title
+  doc.setFontSize(16);
+  doc.setFont(undefined, "bold");
+  doc.text("Listado de Vehículos", pageWidth / 2, titleY, { align: "center" });
+  doc.setFontSize(10);
+  doc.setFont(undefined, "normal");
+  doc.text(`Fecha: ${fecha}`, pageWidth / 2, titleY + 6, { align: "center" });
+
+  // Table
+  let currentY = headerYStart;
+  drawHeader(currentY);
+  currentY += rowHeight;
+
+  doc.setFontSize(9);
+  doc.setFont(undefined, "normal");
+
+  const marcaFiltro = (marca === null) ? "" : (marca !== undefined ? String(marca).trim().toLowerCase() : (filtroMarca.value || "").trim().toLowerCase());
+
+  modelos.value.forEach((modelo) => {
+    const modeloMarca = String(modelo.marca || "").trim().toLowerCase();
+    const matches = !marcaFiltro || modeloMarca === marcaFiltro;
+    if (!matches) return;
+
+    if (currentY + rowHeight > footerLimitY) {
+      doc.addPage();
+      currentY = headerYStart;
+      drawHeader(currentY);
+      currentY += rowHeight;
+      doc.setFontSize(9);
+      doc.setFont(undefined, "normal");
+    }
+
+    let x = leftMargin;
+    const cells = [
+      String(modelo.matricula || ""),
+      String(modelo.marca || ""),
+      String(modelo.modelo || ""),
+      String(modelo.estado || ""),
+      String(modelo.combustible || ""),
+      modelo.precio != null ? `${modelo.precio} €` : "0 €",
+    ];
+
+    for (let i = 0; i < cells.length; i++) {
+      const w = colWidths[i];
+      doc.rect(x, currentY, w, rowHeight);
+      const available = w - cellPadding * 2;
+      const txt = truncateToWidth(cells[i], available, 9, "normal");
+      const textX = x + cellPadding;
+      const textY = currentY + rowHeight / 2 + 9 / 2.8;
+      doc.text(txt, textX, textY);
+      x += w;
+    }
+
+    currentY += rowHeight;
+  });
+
+  const filePDF = `listado_vehiculos_${fecha}_${hora}.pdf`;
+  doc.save(filePDF);
+};
+
+</script>
+
+<style scoped>
+
+.table-primary th {
+  background-color: #ebf4f6 !important;
+  color: #09637e !important;
+}
+
+
+
+/*
+
+IMPRIMIR ANTIGUO
+
+
+
 
 const imprimirPDF = () => {
   const doc = new jsPDF();
@@ -789,13 +1008,16 @@ const imprimirPDF = () => {
   doc.save(filePDF);
 };
 
-</script>
 
-<style scoped>
 
-.table-primary th {
-  background-color: #ebf4f6 !important;
-  color: #09637e !important;
-}
 
+
+
+*/
 </style>
+
+
+
+
+
+
