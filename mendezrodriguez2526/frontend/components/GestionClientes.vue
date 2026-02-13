@@ -177,7 +177,7 @@
       </div>
 
       <!-- Dirección, Provincia y Municipio -->
-      <div class="mb-3 row g-3 align-items-center">
+      <div class="  ">
         <!-- Dirección -->
         <div class="col-md-5 d-flex align-items-center">
           <label for="direccion" class="form-label mb-0 w-25 text-nowrap"
@@ -300,7 +300,7 @@
           <button
             type="submit"
             class="btn btn-primary px-4"
-            style="background-color: #088395;"
+            style="background-color: #088395"
             :disabled="!nuevoCliente.lopd"
           >
             {{ editando ? "Modificar" : "Guardar" }}
@@ -308,7 +308,7 @@
         </div>
 
         <!-- Checkbox al final -->
-        <div class="form-check form-switch ms-3" v-if="isAdmin">
+        <div class="form-check form-switch ms-3">
           <input
             type="checkbox"
             id="historico"
@@ -324,17 +324,67 @@
     <div class="table-responsive" v-if="isAdmin">
       <h4 class="text-center w-100">Listado Clientes</h4>
       <div class="d-flex justify-content-center gap-2 mb-3">
-        <button 
-          @click="ordenarPorApellidos" 
+        <button
+          @click="ordenarPorApellidos"
           class="btn btn-outline-secondary btn-sm"
-          title="Ordenar por Apellidos">
+          title="Ordenar por Apellidos"
+        >
           <i class="bi bi-sort-alpha-down me-1"></i>Ordenar por Apellidos
         </button>
-        <button 
-          @click="ordenarPorNombre" 
+        <button
+          @click="ordenarPorNombre"
           class="btn btn-outline-secondary btn-sm"
-          title="Ordenar por Nombre">
+          title="Ordenar por Nombre"
+        >
           <i class="bi bi-sort-alpha-up me-1"></i>Ordenar por Nombre
+        </button>
+      </div>
+      <div class="d-flex align-items-center justify-content-center">
+        <label>Imprimir según tipo de cliente:</label>
+        <div class="ms-3">
+          <label for="radio-empresa">Todos:</label>
+          <input
+            type="radio"
+            id="radio-empresa"
+            value=""
+            name="radio"
+            class="ms-2"
+            v-model="filtroMarca"
+            required
+          />
+        </div>
+        <div class="ms-3">
+          <label for="radio-empresa">Empresa:</label>
+          <input
+            type="radio"
+            id="radio-empresa"
+            value="empresa"
+            name="radio"
+            class="ms-2"
+            v-model="filtroMarca"
+            required
+          />
+        </div>
+
+        <div class="ms-3">
+          <label for="radio-particular">Particular:</label>
+          <input
+            type="radio"
+            id="radio-particular"
+            value="particular"
+            name="radio"
+            class="ms-2"
+            v-model="filtroMarca"
+            required
+          />
+        </div>
+
+        <button
+          @click="imprimirPDF"
+          class="btn btn-outline-secondary btn-sm"
+          title="Ordenar por Apellidos"
+        >
+          <i class="bi bi-sort-alpha-down me-1"></i>Imprimir PDF
         </button>
       </div>
       <table class="table table-bordered table-striped w-100 align-middle">
@@ -371,9 +421,9 @@
               <button
                 @click="editarCliente(cliente.movil)"
                 class="btn btn-warning border 0 btn-sm"
-                style="background-color: #7ab2b2;"
+                style="background-color: #7ab2b2"
               >
-                <i class="bi bi-pencil" ></i>
+                <i class="bi bi-pencil"></i>
               </button>
               <button
                 v-if="!cliente.historico"
@@ -424,7 +474,12 @@ import {
 import Swal from "sweetalert2";
 import bcrypt from "bcryptjs";
 import { esAdmin } from "../api/authApi";
+import { jsPDF } from "jspdf";
+import "jspdf-autotable";
 //import { ref } from 'vue';
+
+let filtroMarca = ref("");
+filtroMarca = "particular";
 
 //SCRIPT CRUD
 
@@ -1055,16 +1110,16 @@ const limpiarCampos = () => {
 
 // Función para ordenar por Apellidos
 const ordenarPorApellidos = () => {
-  clientes.value = [...clientes.value].sort((a, b) => 
-    a.apellidos.localeCompare(b.apellidos, 'es', { sensitivity: 'base' })
+  clientes.value = [...clientes.value].sort((a, b) =>
+    a.apellidos.localeCompare(b.apellidos, "es", { sensitivity: "base" }),
   );
   currentPage.value = 1; // Reset a primera página
 };
 
 // Función para ordenar por Nombre
 const ordenarPorNombre = () => {
-  clientes.value = [...clientes.value].sort((a, b) => 
-    a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' })
+  clientes.value = [...clientes.value].sort((a, b) =>
+    a.nombre.localeCompare(b.nombre, "es", { sensitivity: "base" }),
   );
   currentPage.value = 1; // Reset a primera página
 };
@@ -1074,6 +1129,64 @@ const validarPassword = () => {
   const pw = nuevoCliente.value.password || "";
   const pw2 = nuevoCliente.value.password2 || "";
   passwordValido.value = pw.length >= 6 && pw === pw2;
+};
+
+const imprimirPDF = () => {
+  const doc = new jsPDF();
+
+  const fecha = new Date().toISOString().split("T")[0];
+  doc.setFontSize(16);
+  doc.text("Listado de clientes", 75, 20);
+
+  doc.setFontSize(10);
+  doc.text(`Fecha: ${fecha}`, 85, 25);
+
+  // Crear tabla manualmente sin autoTable
+  let yPosition = 35;
+  const columnX = [10, 40, 70, 90, 130, 165];
+  const headers = ["Apellidos", "Nombre", "DNI", "Email", "Movil", "Tipo"];
+
+  // Headers
+  doc.setFont(undefined, "bold");
+  headers.forEach((header, i) => {
+    doc.text(header, columnX[i], yPosition);
+  });
+
+  yPosition += 8;
+  doc.setFont(undefined, "normal");
+  doc.setFontSize(9);
+
+  // Datos
+  clientes.value.forEach((cliente) => {
+    console.log(cliente.tipoCliente);
+    if (cliente.tipoCliente === filtroMarca || filtroMarca === "") {
+      console.log(cliente.tipoCliente);
+      doc.text(String(cliente.apellidos || ""), columnX[0], yPosition);
+      doc.text(String(cliente.nombre || ""), columnX[1], yPosition);
+      doc.text(String(cliente.dni || ""), columnX[2], yPosition);
+      doc.text(String(cliente.email || ""), columnX[3], yPosition);
+      doc.text(String(cliente.movil || ""), columnX[4], yPosition);
+      doc.text(String(cliente.tipoCliente || ""), columnX[5], yPosition);
+
+      //   dni: '',
+      //   nombre: '',
+      //   apellidos: '',
+      //   email: '',
+      //   movil: '',
+      //   direccion: '',
+      //   provincia: '',
+      //   municipio: '',
+      //   fecha_alta: '',
+      //   historico: true
+
+      yPosition += 7;
+    }
+  });
+
+  const hora = new Date().toLocaleTimeString().split(" ")[0];
+  const filePDF = `listado_clientes_${fecha}_${hora.replace(/:/g, "-")}.pdf`;
+
+  doc.save(filePDF);
 };
 </script>
 

@@ -6,7 +6,7 @@ Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://
 
 db.createUser({
 user: "admin",
-pwd: "admin123",
+pwd: "abc123",
 roles: [
 { role: "readWriteAnyDatabase", db: "admin" },
 { role: "userAdminAnyDatabase", db: "admin" }

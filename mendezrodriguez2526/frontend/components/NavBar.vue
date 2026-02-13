@@ -54,7 +54,9 @@
             <router-link class="nav-link" to="/empleo">Empleo</router-link>
           </li>
           <li class="nav-item" v-if="isAdmin">
-            <router-link class="nav-link" to="/solicitudes">Solicitudes</router-link>
+            <router-link class="nav-link" to="/solicitudes"
+              >Facturas</router-link
+            >
           </li>
         </ul>
         <!-- BUSCADOR alineado a la derecha -->

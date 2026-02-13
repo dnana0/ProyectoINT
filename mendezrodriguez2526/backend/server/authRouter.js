@@ -26,7 +26,7 @@ router.get("/citas-taller", verificarToken, soloAdmin, (req, res) => {
   res.json({ message: `Hola, ${req.user.dni} estás autenticado` });
 });
 
-router.get("/check-admin", verificarToken,(req, res) => {
+router.get("/check-admin", verificarToken, (req, res) => {
   res.json({ esAdmin: req.user?.tipo === "admin" });
 });
 

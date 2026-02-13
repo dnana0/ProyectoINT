@@ -335,7 +335,7 @@
         <div>
           <button
             class="btn btn-primary rounded border shadow-none px-4"
-            style="background-color: #088395;"
+            style="background-color: #088395"
             type="submit"
           >
             {{ editando ? "Modificar" : "Guardar" }}
@@ -347,18 +347,23 @@
       <h4 class="text-center mb-3" style="color: #7ab2b2">
         Listado de Modelos
       </h4>
-      
+
       <!-- Botones de impresión -->
       <div class="d-flex justify-content-between align-items-center mb-3 gap-3">
         <!-- Imprimir por marca (izquierda) -->
-        <div class="d-flex align-items-center gap-2" style="flex: 1; max-width: 400px;">
-
+        <div
+          class="d-flex align-items-center gap-2"
+          style="flex: 1; max-width: 400px"
+        >
           <button
             class="btn btn-secondary rounded shadow-sm px-3 border-2"
             type="button"
             @click="imprimirPorMarca"
-            style="white-space: nowrap; background-color: #7ab2b2; border-color: #7ab2b2 ;"
-            
+            style="
+              white-space: nowrap;
+              background-color: #7ab2b2;
+              border-color: #7ab2b2;
+            "
           >
             <i class="bi bi-printer me-2"></i>Marca
           </button>
@@ -370,7 +375,7 @@
             @blur="capitalizarFiltroMarca"
             class="form-control rounded shadow-none border-2"
             placeholder="Indica la marca a imprimir"
-            style="flex: 1; border-color: #7ab2b2;"
+            style="flex: 1; border-color: #7ab2b2"
           />
         </div>
 
@@ -379,7 +384,7 @@
           @click="imprimirTodos"
           class="btn btn-secondary rounded shadow-sm px-3 border-2"
           type="button"
-          style="background-color: #7ab2b2; border-color: #7ab2b2;  "
+          style="background-color: #7ab2b2; border-color: #7ab2b2"
         >
           <i class="bi bi-printer me-2"></i>Imprimir Todo
         </button>
@@ -401,25 +406,80 @@
         </thead>
         <tbody>
           <tr v-for="modelo in modelos" :key="modelo._id" class="text-center">
-            <td>
-              <img 
+            <td
+              :style="
+                modelo.estado === 'disponible'
+                  ? ''
+                  : 'background-color: #fcbe78'
+              "
+            > 
+              <img
                 v-if="modelo.imagen"
                 :src="`http://localhost:5000${modelo.imagen}`"
                 alt="Vehículo"
-                style="width: 60px; height: 60px; object-fit: cover; border-radius: 4px;"
+                style="
+                  width: 60px;
+                  height: 60px;
+                  object-fit: cover;
+                  border-radius: 4px;
+                "
               />
-              <span v-else class="text-muted">Sin imagen</span>
+              <span v-else class="text-muted">Sin ima gen</span>
             </td>
-            <td>{{ modelo.matricula }}</td>
-            <td>{{ modelo.marca }}</td>
-            <td>{{ modelo.modelo }}</td>
-            <td>{{ modelo.estado }}</td>
-            <td>
+            <td
+              :style="
+                modelo.estado === 'disponible'
+                  ? ''
+                  : 'background-color: #fcbe78'
+              "
+            >
+              {{ modelo.matricula }}
+            </td>
+            <td
+              :style="
+                modelo.estado === 'disponible'
+                  ? ''
+                  : 'background-color: #fcbe78'
+              "
+            >
+              {{ modelo.marca }}
+            </td>
+            <td
+              :style="
+                modelo.estado === 'disponible'
+                  ? ''
+                  : 'background-color: #fcbe78'
+              "
+            >
+              {{ modelo.modelo }}
+            </td>
+            <td
+              :style="
+                modelo.estado === 'disponible'
+                  ? ''
+                  : 'background-color: #fcbe78'
+              "
+            >
+              {{ modelo.estado }}
+            </td>
+            <td
+              :style="
+                modelo.estado === 'disponible'
+                  ? ''
+                  : 'background-color: #fcbe78'
+              "
+            >
               <div>
                 {{ modelo.contacto.nombre }} {{ modelo.contacto.telefono }}
               </div>
             </td>
-            <td>
+            <td
+              :style="
+                modelo.estado === 'disponible'
+                  ? ''
+                  : 'background-color: #fcbe78'
+              "
+            >
               <button
                 class="btn btn-sm btn-primary me-2"
                 @click="editarVehiculo(modelo)"
@@ -831,7 +891,11 @@ const imprimirPDF = (marca) => {
 
   const rgbFromHex = (hex) => {
     const h = hex.replace("#", "");
-    return [parseInt(h.substring(0, 2), 16), parseInt(h.substring(2, 4), 16), parseInt(h.substring(4, 6), 16)];
+    return [
+      parseInt(h.substring(0, 2), 16),
+      parseInt(h.substring(2, 4), 16),
+      parseInt(h.substring(4, 6), 16),
+    ];
   };
   const headerBg = "#09637e";
   const headerRgb = rgbFromHex(headerBg);
@@ -896,10 +960,17 @@ const imprimirPDF = (marca) => {
   doc.setFontSize(9);
   doc.setFont(undefined, "normal");
 
-  const marcaFiltro = (marca === null) ? "" : (marca !== undefined ? String(marca).trim().toLowerCase() : (filtroMarca.value || "").trim().toLowerCase());
+  const marcaFiltro =
+    marca === null
+      ? ""
+      : marca !== undefined
+        ? String(marca).trim().toLowerCase()
+        : (filtroMarca.value || "").trim().toLowerCase();
 
   modelos.value.forEach((modelo) => {
-    const modeloMarca = String(modelo.marca || "").trim().toLowerCase();
+    const modeloMarca = String(modelo.marca || "")
+      .trim()
+      .toLowerCase();
     const matches = !marcaFiltro || modeloMarca === marcaFiltro;
     if (!matches) return;
 
@@ -939,17 +1010,13 @@ const imprimirPDF = (marca) => {
   const filePDF = `listado_vehiculos_${fecha}_${hora}.pdf`;
   doc.save(filePDF);
 };
-
 </script>
 
 <style scoped>
-
 .table-primary th {
   background-color: #ebf4f6 !important;
   color: #09637e !important;
 }
-
-
 
 /*
 
@@ -1015,9 +1082,3 @@ const imprimirPDF = () => {
 
 */
 </style>
-
-
-
-
-
-

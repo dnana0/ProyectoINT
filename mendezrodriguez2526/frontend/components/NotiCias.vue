@@ -80,6 +80,13 @@
                   }}
                 </a>
                 <button
+                  @click="votarNoticia(noticia.id, noticia)"
+                  class="btn btn-danger btn-sm border-0 me-2"
+                  style="background-color: #088395"
+                >
+                  <i class="bi bi-hand-thumbs-up"></i> {{ noticia.votos }}
+                </button>
+                <button
                   @click="eliminarNoticia(noticia.id)"
                   class="btn btn-danger btn-sm border-0 me-2"
                   style="background-color: #088395"
@@ -98,7 +105,12 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import Swal from "sweetalert2";
-import { getNoticias, addNoticia, deleteNoticia } from "@/api/noticias.js";
+import {
+  getNoticias,
+  addNoticia,
+  deleteNoticia,
+  updateNoticia,
+} from "@/api/noticias.js";
 import { esAdmin } from "../api/authApi";
 
 const noticias = ref([]);
@@ -175,10 +187,21 @@ const eliminarNoticia = async (id) => {
     }
   }
 };
+
+const votarNoticia = async (id, noticia) => {
+  console.log("Has votado");
+  try {
+    noticia.votos = noticia.votos + 1;
+    await updateNoticia(id, noticia);
+  } catch (error) {
+    console.error(error);
+    Swal.fire({ icon: "error", title: "Error al eliminar la noticia" });
+  }
+};
 </script>
 
 <style scoped>
 .btn-primary {
- margin-top: 1em;
+  margin-top: 1em;
 }
 </style>

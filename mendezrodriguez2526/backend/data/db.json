@@ -601,19 +601,22 @@
       "id": "1",
       "titulo": "Los coches chinos conquistan Europa ",
       "contenido": "Los coches chinos a la conquista europea. En 2025, marcas como BYD, MG y NIO ya controlan más del 10 % del mercado europeo. Su éxito se debe a precios competitivos, tecnología avanzada y una oferta eléctrica que atrae a consumidores y gobiernos. Mientras fabricantes tradicionales como Volkswagen y Renault intentan adaptarse, China gana terreno gracias a una producción eficiente y una estrategia de expansión agresiva en toda la Unión Europea.",
-      "fecha": "2025-10-23"
+      "fecha": "2025-10-23",
+      "votos": 5
     },
     {
       "id": "2",
       "titulo": "Toyota presenta un nuevo motor",
       "contenido": "Toyota presenta su nuevo eléctrico bZ4X, un SUV compacto con autonomía de hasta 450 km y tecnología avanzada de asistencia al conductor. Este modelo marca el inicio de la nueva familia bZ (beyond Zero) de Toyota, enfocada en cero emisiones. El bZ4X cuenta con tracción total opcional, carga rápida y un diseño futurista que combina eficiencia y confort. Llegará a concesionarios en 2025, posicionándose como una opción competitiva en el mercado EV global.",
-      "fecha": "2025-10-23"
+      "fecha": "2025-10-23",
+      "votos": 1
     },
     {
       "id": "3",
       "titulo": "La UE dando palos de ciego en el mundo del motor",
       "contenido": "A pesar del firme respaldo de países como España y Francia a la meta de 2035 para prohibir la venta de coches nuevos con motores de combustión interna en la Unión Europea, Alemania ha impulsado una revisión de esta normativa ante la presión de los fabricantes de automóviles. Esta directiva forma parte del Pact Verde Europeo y pretende acelerar el fin de los combustibles fósiles en el transporte.",
-      "fecha": "2025-10-24"
+      "fecha": "2025-10-24",
+      "votos": 7
     }
   ],
   "citas": [
