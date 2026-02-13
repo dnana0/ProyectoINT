@@ -148,6 +148,26 @@
             <h5 class="mb-3 text-center" style="color: #7AB2B2;">
                 <i class="bi bi-list-ul me-2"></i>Listado de Citas
             </h5>
+            
+            <!-- Filtro por estado -->
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <!-- <label for="filtroEstado" class="form-label">
+                        <i class="bi bi-funnel me-2"></i>Filtrar por Estado:
+                    </label> -->
+                    <select 
+                        id="filtroEstado"
+                        v-model="filtroEstado" 
+                        class="form-select"
+                    >
+                        <option value="">Todos los estados</option>
+                        <option v-for="estado in estadosUnicos" :key="estado" :value="estado">
+                            {{ estado }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            
             <div class="table-responsive">
                 <table class="table table-bordered table-striped table-hover align-middle">
                     <thead class="table-primary text-center">
@@ -161,8 +181,8 @@
                             <th>Acciones</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr class="text-center" v-for="cita in citas" :key="cita.id">
+                    <tbody> 
+                        <tr class="text-center" v-for="cita in citasFiltradas" :key="cita.id">  <!-- cita in citas si no aplicamos ningun filtro -->
                             <td>{{ cita.id }}</td>
                             <td>{{ formatearFecha(cita.fechaCita) }}</td>
                             <td>{{ cita.matricula }}</td>
@@ -205,7 +225,7 @@
     </div>
 </template>
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed } from 'vue';
 import {addCita, updateCita, deleteCita, getCita} from '../api/taller'
 import Swal from "sweetalert2";
 
@@ -228,7 +248,21 @@ const listaServicios = [
 
 const editando = ref(false)
 const citaEditandoId = ref("")
+const filtroEstado = ref("")
 
+// Computed property para obtener estados únicos de las citas existentes
+const estadosUnicos = computed(() => {
+    const estados = citas.value.map(cita => cita.estadoCita)
+    return [...new Set(estados)].sort()
+})
+
+// Computed property para filtrar citas según el estado seleccionado
+const citasFiltradas = computed(() => {
+    if (!filtroEstado.value) {
+        return citas.value
+    }
+    return citas.value.filter(cita => cita.estadoCita === filtroEstado.value)
+})
 
 async function cargarCita() {
     try {
